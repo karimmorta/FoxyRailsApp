@@ -1,0 +1,33 @@
+.container-fluid.landing
+  .row-fluid
+    .col-md-12
+      .background
+        .content
+          %h1 FoxTips
+          %h2= t('value_proposition')
+          %p.explanation= t('explanation')
+          %p.join=t('join')          
+          = form_tag(register_email_path) do |f|
+            = text_field_tag(:email, "", {class: 'email-input', placeholder: 'Enter your email', autofocus: true})
+            = submit_tag "OK", class: 'submit'
+  .row-fluid
+    .walkthrought
+      .col-md-10.col-md-offset-1
+        .row
+          .col-md-4.feature
+            = image_tag 'datavizualisation.png'
+            %h2 DATAVIZUALISATION
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          .col-md-4.feature
+            = image_tag 'store.png'
+            %h2 STORE
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          .col-md-4.feature
+            = image_tag 'multiplatform.png'
+            %h2 MULTIPLATFORM
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+    .footer
+      .separator
+      %p Features
+      %p Pricing
+      %p Contact

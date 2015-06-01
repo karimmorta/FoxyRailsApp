@@ -1,0 +1,147 @@
+// Place all the styles related to the landing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+    font-family: "Whitney-BoldItalic";
+    src: url('Whitney-BoldItalic.otf');
+}
+
+@font-face {
+    font-family: "Gotham-Book";
+    src: url('Gotham-Book.otf');
+}
+@font-face {
+    font-family: "Whitney-Book";
+    src: url('Whitney-Book.otf');
+}
+@font-face {
+    font-family: "Whitney-BookItalic.otf";
+    src: url('Whitney-BookItalic.otf');
+}
+@font-face {
+    font-family: "Gotham-Bold.otf";
+    src: url('Gotham-Bold.otf');
+}
+
+
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;
+}
+
+.background {
+  background-image: url('/assets/background_fit.png');
+  background-size: auto;
+  width: 100%;
+  height: 523px;
+  background-position: top;
+  background-repeat: no-repeat;
+  // position: absolute;
+}
+
+.landing {
+
+}
+
+.email-input {
+  width: 355px;
+  height: 48px;
+  background-color: #002861;
+  font-size: 10px;
+  font-family: "Whitney-BookItalic.otf";
+  color: white !important;
+  border-radius: 4px;
+  padding-left: 8px;
+  margin-left: 65px;
+}
+.feature {
+  text-align: center;
+  margin-top: 68px;
+}
+.submit {
+  width: 51px;
+  height: 33px;
+  background-color:white;
+  color: #002861;
+  font-family: "Gotham-Bold.otf";
+  border-radius: 2px;
+  right: 65px;
+  position: relative;
+}
+.landing {
+  color: white;
+  text-align: center;
+  // margin-top: 7.313em;
+  h1 {
+    font-size: 30px;
+    font-family: "Whitney-BoldItalic";
+    padding-top: 60px !important;
+    margin-top: 0px !important;
+  }
+  h2 {
+    font-family: "Gotham-Book";
+    margin-top: 2.250em;
+    text-transform: uppercase;
+    font-size: 1.875em;
+    width: 15.750em;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 30px;
+    font-weight: lighter;
+  }
+  p {
+    font-size: 15px;
+    font-family: "Whitney-Book";
+    width: initial;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  p.explanation {
+    color: #bfdef1;
+    opacity: 0.6;
+    max-width: 388px;
+
+  }
+  p.join {
+    margin-top: 50px;
+    max-width: 248px;
+    /*width: 11.250em;*/
+  }
+  .walkthrought {
+    background-color:#f7f7f7;
+    color: #003973;
+    height: 900px;
+    width: 1320px;
+    margin-right: auto;
+    margin-left: auto;
+    h2 {
+    width: initial;
+    margin-top: 30px;
+    }
+  }
+  .separator {
+      width: 100%;
+      height: 1px;
+      color: #a4a4a4;
+    }
+  .footer {
+    p {
+      display: inline;
+      color: #a4a4a4;
+    }
+  }
+  
+}
