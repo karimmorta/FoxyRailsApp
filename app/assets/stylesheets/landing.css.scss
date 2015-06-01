@@ -4,24 +4,24 @@
 
 @font-face {
     font-family: "Whitney-BoldItalic";
-    src: url('Whitney-BoldItalic.otf');
+    src: font-url('Whitney-BoldItalic.otf');
 }
 
 @font-face {
     font-family: "Gotham-Book";
-    src: url('Gotham-Book.otf');
+    src: font-url('Gotham-Book.otf');
 }
 @font-face {
     font-family: "Whitney-Book";
-    src: url('Whitney-Book.otf');
+    src: font-url('Whitney-Book.otf');
 }
 @font-face {
     font-family: "Whitney-BookItalic.otf";
-    src: url('Whitney-BookItalic.otf');
+    src: font-url('Whitney-BookItalic.otf');
 }
 @font-face {
     font-family: "Gotham-Bold.otf";
-    src: url('Gotham-Bold.otf');
+    src: font-url('Gotham-Bold.otf');
 }
 
 
@@ -43,7 +43,7 @@
 }
 
 .background {
-  background-image: url('/assets/background_fit.png');
+  background-image: image-url('/assets/background_fit.png');
   background-size: auto;
   width: 100%;
   height: 523px;
