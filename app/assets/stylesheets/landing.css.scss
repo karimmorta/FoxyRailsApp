@@ -56,16 +56,24 @@
 
 }
 
-.email-input {
-  width: 355px;
-  height: 48px;
+.register {
+  border-radius: 4px;
   background-color: #002861;
+  width: 22.188em;
+  height: 3.2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.email-input {
   font-size: 10px;
   font-family: "Whitney-BookItalic.otf";
   color: white !important;
-  border-radius: 4px;
   padding-left: 8px;
-  margin-left: 65px;
+  width: 22.188em;
+  height: 3.2em;
+  background:none;
+
 }
 .feature {
   text-align: center;
@@ -78,8 +86,9 @@
   color: #002861;
   font-family: "Gotham-Bold.otf";
   border-radius: 2px;
-  right: 65px;
+  // right: 65px;
   position: relative;
+  margin-top: 4px;
 }
 .landing {
   color: white;
