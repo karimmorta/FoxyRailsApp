@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  ba_url: MyString
+  avg_odds: 1.5
+  yield: 1.5
+
+two:
+  name: MyString
+  ba_url: MyString
+  avg_odds: 1.5
+  yield: 1.5

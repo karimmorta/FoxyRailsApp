@@ -1,0 +1,30 @@
+%h1 Listing tipsters
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Ba url
+      %th Avg odds
+      %th Yield
+      %th
+      %th
+      %th
+
+  %tbody
+    - @tipsters.each do |tipster|
+      %tr
+        %td= tipster.name
+        %td= tipster.ba_url
+        %td= tipster.avg_odds
+        %td= tipster.avg_yield
+        %td= link_to 'Show', tipster
+        %td= link_to 'Edit', edit_tipster_path(tipster)
+        %td= link_to 'Destroy', tipster, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Tipster', new_tipster_path
+
+
+= column_chart Tipster.group(:avg_yield).count

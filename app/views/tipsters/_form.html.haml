@@ -1,0 +1,22 @@
+= form_for @tipster do |f|
+  - if @tipster.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@tipster.errors.count, "error")} prohibited this tipster from being saved:"
+      %ul
+        - @tipster.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :ba_url
+    = f.text_field :ba_url
+  .field
+    = f.label :avg_odds
+    = f.text_field :avg_odds
+  .field
+    = f.label :avg_yield
+    = f.text_field :avg_yield
+  .actions
+    = f.submit 'Save'

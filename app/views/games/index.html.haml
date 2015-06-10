@@ -1,0 +1,29 @@
+%h1 Listing games
+
+%table
+  %thead
+    %tr
+      %th Home
+      %th Away
+      %th Competition
+      %th Start date
+      %th End date
+      %th
+      %th
+      %th
+
+  %tbody
+    - @games.each do |game|
+      %tr
+        %td= game.home_id
+        %td= game.away_id
+        %td= game.competition_id
+        %td= game.start_date
+        %td= game.end_date
+        %td= link_to 'Show', game
+        %td= link_to 'Edit', edit_game_path(game)
+        %td= link_to 'Destroy', game, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Game', new_game_path

@@ -11,9 +11,148 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150530173125) do
+ActiveRecord::Schema.define(version: 20150604215308) do
+
+  create_table "divisions", force: :cascade do |t|
+    t.string   "name"
+    t.string   "short_name"
+    t.string   "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.integer  "home_id"
+    t.integer  "away_id"
+    t.string   "game_name"
+    t.integer  "competition_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "attendance"
+    t.integer  "referee_id"
+    t.integer  "fthg"
+    t.integer  "ftag"
+    t.string   "ftr"
+    t.integer  "hthg"
+    t.integer  "htag"
+    t.integer  "htr"
+    t.integer  "hs"
+    t.integer  "as"
+    t.integer  "hst"
+    t.integer  "ast"
+    t.integer  "hhw"
+    t.integer  "ahw"
+    t.integer  "hc"
+    t.integer  "ac"
+    t.integer  "hf"
+    t.integer  "af"
+    t.integer  "ho"
+    t.integer  "ao"
+    t.integer  "hy"
+    t.integer  "ay"
+    t.integer  "hr"
+    t.integer  "ar"
+    t.integer  "hbp"
+    t.integer  "abp"
+    t.float    "b365h"
+    t.float    "b365d"
+    t.float    "b365a"
+    t.float    "bsh"
+    t.float    "bsd"
+    t.float    "bsa"
+    t.float    "bwh"
+    t.float    "bwd"
+    t.float    "bwa"
+    t.float    "gb"
+    t.float    "gbd"
+    t.float    "gba"
+    t.float    "iwh"
+    t.float    "iwd"
+    t.float    "iwa"
+    t.float    "lbh"
+    t.float    "lbd"
+    t.float    "lba"
+    t.float    "psh"
+    t.float    "psd"
+    t.float    "psa"
+    t.float    "soh"
+    t.float    "sod"
+    t.float    "soa"
+    t.float    "sbh"
+    t.float    "sbd"
+    t.float    "sba"
+    t.float    "sjh"
+    t.float    "sjd"
+    t.float    "sja"
+    t.float    "syh"
+    t.float    "syd"
+    t.float    "sya"
+    t.float    "vch"
+    t.float    "vcd"
+    t.float    "vca"
+    t.float    "whh"
+    t.float    "whd"
+    t.float    "wha"
+    t.integer  "bb1x2"
+    t.float    "bbmxh"
+    t.float    "bbavh"
+    t.float    "bbmxd"
+    t.float    "bbavd"
+    t.float    "bbmxa"
+    t.float    "bbava"
+    t.integer  "bbou"
+    t.float    "bbmx_over_two_point_five"
+    t.float    "bbav_over_two_point_five"
+    t.float    "bbmx_under_two_point_five"
+    t.float    "bbav_under_two_point_five"
+  end
+
+  create_table "picks", force: :cascade do |t|
+    t.string   "game_name"
+    t.integer  "game_id"
+    t.string   "bet"
+    t.integer  "bet_type"
+    t.boolean  "won"
+    t.float    "odds"
+    t.integer  "tipster_id"
+    t.datetime "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "team_id"
+    t.integer  "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "division_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "tips", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tipsters", force: :cascade do |t|
+    t.string   "name"
+    t.string   "ba_url"
+    t.float    "avg_odds"
+    t.float    "avg_yield"
+    t.float    "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_scores", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

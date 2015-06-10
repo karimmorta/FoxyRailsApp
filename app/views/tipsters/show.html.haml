@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @tipster.name
+%p
+  %b Ba url:
+  = @tipster.ba_url
+%p
+  %b Avg odds:
+  = @tipster.avg_odds
+%p
+  %b Yield:
+  = @tipster.avg_yield
+
+%h2 Tips
+- @tipster.picks.each do |tip|
+  %p
+    %b Game Name:
+    = tip.game_name
+  %p
+    %b Won:
+    = tip.won
+  %p
+    %b Odds:
+    = tip.odds
+  %p
+    %b Date:
+    = tip.date
+  %p
+    %b Type:
+    = tip.type
+
+= link_to 'Edit', edit_tipster_path(@tipster)
+\|
+= link_to 'Back', tipsters_path

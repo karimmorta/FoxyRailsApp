@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  resources :picks
+
+  resources :tipsters
+
+  resources :players
+
+  resources :teams
+
+  resources :divisions
+
+  resources :games
+
   devise_for :users
   root 'tips#index'
   resources :tips

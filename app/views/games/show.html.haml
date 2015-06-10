@@ -1,0 +1,11 @@
+%p#notice= notice
+
+= link_to 'Create Pick for this Game', new_pick_path(game_id: @game.id, game_name: @game.game_name)
+- for attribute in @game.attributes.keys
+  %p=attribute.humanize 
+  %p=@game.attributes[attribute].to_s 
+
+
+= link_to 'Edit', edit_game_path(@game)
+\|
+= link_to 'Back', games_path

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_name: MyString
+  game_id: 1
+  won: false
+  odds: 1.5
+  tipster_id: 1
+  date: 2015-06-04 23:53:08
+
+two:
+  game_name: MyString
+  game_id: 1
+  won: false
+  odds: 1.5
+  tipster_id: 1
+  date: 2015-06-04 23:53:08
