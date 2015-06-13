@@ -1,0 +1,766 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// *= require reset.css
+
+
+@font-face {
+    font-family: "Whitney-BoldItalic";
+    src: font-url('Whitney-BoldItalic.otf');
+}
+
+@font-face {
+    font-family: "Gotham-Book";
+    src: font-url('Gotham-Book.otf');
+}
+@font-face {
+    font-family: "Whitney-Book";
+    src: font-url('Whitney-Book.otf');
+}
+@font-face {
+    font-family: "Whitney-BookItalic.otf";
+    src: font-url('Whitney-BookItalic.otf');
+}
+@font-face {
+    font-family: "Gotham-Bold.otf";
+    src: font-url('Gotham-Bold.otf');
+}
+
+@font-face {
+    font-family: "Gotham-Light";
+    src: font-url('Gotham-Light.ttf');
+}
+
+body {
+  background: #e9e9eb;
+  font-size: 0;
+}
+.container{
+  max-width: 2048px;
+  width: 1380px;
+  margin:0 auto;
+  background-color: #fff;
+  -moz-box-shadow: 0px 3px 40px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0px 3px 40px 0px rgba(0,0,0,0.1);
+  -o-box-shadow: 0px 3px 40px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 3px 40px 0px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
+
+
+/* 
+!!!!!   HEADER    !!!!! 
+*/
+
+
+header {
+  position: fixed;
+  z-index: 1;
+  display: inline-block;
+  height: 60px;
+  width: 1380px;
+  background: #000000; /* Old browsers */
+  background: -moz-linear-gradient(left, #000000 0%, #161616 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#000000), color-stop(100%,#161616));
+  background: -webkit-linear-gradient(left, #000000 0%,#161616 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #000000 0%,#161616 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #000000 0%,#161616 100%); /* IE10+ */
+  background: linear-gradient(to right, #000000 0%,#161616 100%); /* W3C */
+}
+.logo{
+  display: block;
+  float: left;
+  height: 28px;
+  padding: 16px 0 16px 28px;
+}
+
+h2{
+  display: block;
+  float: left;
+  color: #fff;
+  padding: 24px 0 24px 28px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: 'WhitneyBookSC';
+}
+
+.nav{
+  display: inline-block;
+  float: right;
+  width: 510px;
+  font-family: 'WhitneyMedium';
+}
+.menu{
+  display: inline-block;
+}
+.register{
+  display: inline-block;
+  padding-top: 13px;
+  padding-left: 20px;
+}
+header ul {
+  display: inline-block;
+  margin:0;
+  list-style-type:none;
+}
+header li {
+  margin-left:2px;
+  float:left; /*pour IE*/
+}
+
+.registration {
+  border-radius: 50px;
+  background-color: #fff;
+  color: #1b1b1B;
+  display: inline-block;
+  text-align: left;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.5s ease-out 0s;
+}
+
+.registration:hover {
+    transition: all 0.5s ease-out 0s;
+    background: #469fe9; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #469fe9 1%, #1c4eaa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#469fe9), color-stop(100%,#1c4eaa)); 
+    background: -webkit-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* IE10+ */
+    background: linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* W3C */
+    color: #fff;
+}
+
+header ul li a{
+    width: 70px;
+    border-radius: 50px;
+    color: #fff;
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    font-size: 14px;
+    padding:10px;
+    transition: all 0.5s ease-out 0s;
+}
+header ul li a:hover {
+    transition: all 0.5s ease-out 0s;
+    color: #0e5eb0;
+} 
+
+
+
+/* 
+!!!!!   COVER    !!!!! 
+*/
+
+#cover {
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    width: 1380px;
+    height:740px;
+    margin:0;
+    padding:200px 0;
+    background: url(../assets/bg_cover.png) no-repeat center; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+    vertical-align: middle;
+}
+
+#cover h3 {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-family: 'Gotham-Ultra';
+    color: #fff;
+    line-height: 50px;
+}
+
+#cover h3 .bigtxt {
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Gotham-Light' !important;
+    font-weight: 100;
+}
+#cover img {
+    width:14px;
+    height: 20px;
+    margin:0 auto;
+    padding: 25px 0;
+}
+#cover p{
+    font-size: 18px;
+    line-height: 25px;
+    font-family: 'Whitney-Book';
+    color: #fff;
+}
+
+.cta{
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.cta a {
+    font-size: 15px;
+    font-family: 'Gotham-Book';
+    padding:15px 30px;
+    margin: 10px;
+    color: #fff;
+    border-radius: 50px;
+    transition: all 0.5s ease-out 0s;
+}
+
+.cta a:hover {
+    transition: all 0.5s ease-out 0s;
+    background: #469fe9; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #469fe9 1%, #1c4eaa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#469fe9), color-stop(100%,#1c4eaa)); 
+    background: -webkit-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* IE10+ */
+    background: linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* W3C */
+    color: #fff !important;
+    -webkit-box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    -moz-box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    border-radius: 50px;
+}
+
+
+.tryit {
+    background-color: #fff;
+    color: #1e52ae !important;
+    border-radius: 50px;
+}
+
+
+
+/* 
+!!!!!   VIDEO    !!!!! 
+*/
+
+#video{
+    display: inline-block;
+    text-align: center;
+    width:956px;
+    height: 553px;
+    margin: -150px auto 0;
+    background: url(../assets/video_bg.png) no-repeat center; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+}
+
+#video .button{
+    position: relative;
+    top: 159px;
+    left: 150px;
+    width:96px;
+    height:96px;
+}
+
+
+
+/* 
+!!!!!   FEATURES    !!!!! 
+*/
+
+#howto{
+    display: block;
+    text-align: center;
+    width:1380px;
+}
+
+.features{
+    display: inline-block;
+    width: 430px;
+    text-align: center;
+    box-sizing:border-box;
+    padding: 60px 20px;
+}
+
+
+#howto h3{
+    margin-top: 100px;
+    display: inline-block;
+    font-size: 15px;
+    font-family: 'Gotham-Book';
+    color: #1b1b1B;
+    line-height: 40px;
+}
+#howto h3 .bigtxt {
+    font-size: 38px;
+    text-transform: uppercase;
+    color: #1b1b1B;
+    font-family: 'Gotham-Light' !important;
+    font-weight: 100;
+}
+
+
+
+.features h4{
+    font-family: 'Gotham-Book';
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 25px;
+    color: #1B1B1B;
+}
+H4 span {
+    font-family: 'Gotham-Bold';
+}
+
+.features p {
+    font-family: 'Whitney-Book';
+    font-size: 18px;
+    line-height: 25px;
+    color: #1B1B1B;
+}
+
+
+
+
+/* 
+!!!!!   PRICING    !!!!! 
+*/
+
+
+#pricing{
+    margin: 40px 0 0 0;
+    padding-top: 25px;
+    display: block;
+    text-align: center;
+    width:1380px;
+    background-color: #1b1B1B;
+}
+#pricing .title {
+    width: 100%;
+    text-align: center;
+}
+
+.title H3 {
+    margin-top: 40px;
+    font-size: 38px;
+    font-family: 'Gotham-Light';
+    font-weight: 100;
+    color: #FFF;
+    line-height: 40px;    
+}
+
+.title img {
+    width: 155px;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+.bloc_price {
+    display: inline-block;
+    overflow: hidden;
+    width: 270px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin:10px;
+}
+
+.head H5{
+    font-size: 20px;
+    line-height: 25px;
+    font-family: 'Gotham-Bold';
+    color: #1b1b1b;
+    margin-top: 30px;
+}
+
+#pricing ul {
+    display: inline-block;
+    margin:20px 0 0 0;
+    list-style-type:none;
+}
+
+#pricing ul li {
+    font-size: 18px;
+    line-height: 15px;
+    font-family: 'WhitneyBook';
+    color: #1b1B1B;
+    opacity: 0.6;
+    padding: 20px 0;
+}
+
+
+.price {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.price p {
+    font-family: 'Gotham-Book';
+    font-size: 25px;
+    color: #fff;
+    padding: 25px;
+}
+
+.a {
+    background: #55c58c; /* Old browsers */
+    background: -moz-linear-gradient(left,  #55c58c 0%, #22dda2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#55c58c), color-stop(100%,#22dda2));
+    background: -webkit-linear-gradient(left,  #55c58c 0%,#22dda2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #55c58c 0%,#22dda2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #55c58c 0%,#22dda2 100%); /* IE10+ */
+    background: linear-gradient(to right,  #55c58c 0%,#22dda2 100%); /* W3C */
+}
+
+.b {
+    background: #469fe9; /* Old browsers */
+    background: -moz-linear-gradient(left,  #469fe9 0%, #1c4eaa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#469fe9), color-stop(100%,#1c4eaa)); 
+    background: -webkit-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* IE10+ */
+    background: linear-gradient(to right,  #469fe9 0%,#1c4eaa 100%); /* W3C */
+}
+
+.pro {
+    background: #de3967; /* Old browsers */
+    background: -moz-linear-gradient(left,  #de3967 0%, #ff074d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#de3967), color-stop(100%,#ff074d));
+    background: -webkit-linear-gradient(left,  #de3967 0%,#ff074d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #de3967 0%,#ff074d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #de3967 0%,#ff074d 100%); /* IE10+ */
+    background: linear-gradient(to right,  #de3967 0%,#ff074d 100%); /* W3C */
+}
+
+.c {
+    background: #bb44bb; /* Old browsers */
+    background: -moz-linear-gradient(left,  #bb44bb 0%, #8f11b9 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#bb44bb), color-stop(100%,#8f11b9)); 
+    background: -webkit-linear-gradient(left,  #bb44bb 0%,#8f11b9 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #bb44bb 0%,#8f11b9 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #bb44bb 0%,#8f11b9 100%); /* IE10+ */
+    background: linear-gradient(to right,  #bb44bb 0%,#8f11b9 100%); /* W3C */
+}
+
+
+
+
+
+
+/* 
+!!!!!   ABOUT US    !!!!! 
+*/
+
+#aboutus {
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    width: 1380px;
+    margin:0;
+    padding: 60px 0 30px;
+    background-color: #1b1B1b;
+}
+
+#aboutus h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Gotham-Book';
+    color: #fff;
+    line-height: 40px;
+    padding-top: 50px;
+}
+#aboutus h3 .bigtxt {
+    font-size: 38px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Gotham-Light' !important;
+    font-weight: 100;
+}
+
+.imgcontent {
+    display: inline-block;
+    text-align: center;
+    height: 35px;
+    padding: 40px;
+    border-radius: 5px;
+    border: 1px solid #323232;
+    margin:50px;
+    vertical-align: middle;
+}
+
+
+
+/* 
+!!!!!   MOBILE    !!!!! 
+*/
+
+#mobileapp {
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    width: 1380px;
+}
+
+#mobileapp h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Gotham-Book';
+    color: #fff;
+    line-height: 40px;
+    background-color: #1B1B1B;
+    padding-top: 20px;
+}
+#mobileapp h3 .bigtxt {
+    font-size: 38px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Gotham-Light' !important;
+    font-weight: 100;
+}
+
+.store{
+    display: inline-block;
+    background-color: #1B1B1B;
+    width: 100%;
+    padding: 0 0 200px 0;
+    text-align: center;
+}
+.store img {
+    padding: 20px
+}
+
+.big_pic {
+    margin-top: -170px;
+    width:100%;
+    max-width: 815px;
+}
+
+
+/* 
+!!!!!   FOOTER    !!!!! 
+*/
+
+
+.left {
+    width: 33%;
+    float: left;
+}
+.right{
+    width: 33%;
+    float: right;
+}
+
+.center{
+    float: left;
+    width: 33%;
+}
+footer {
+    width: 1380px;
+    height: 80px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 25px 0;
+}
+footer ul {
+    display: inline-block;
+    margin:0;
+    list-style-type:none;
+}
+footer li {
+    margin-left:2px;
+    float:left; /*pour IE*/
+}
+
+footer .left ul li a{
+    font-family: 'Whitney-Book';
+    color: #9fa0a1;
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    font-size: 14px;
+    padding:10px;
+    transition: all 0.5s ease-out 0s;
+}
+footer ul li a:hover {
+    transition: all 0.5s ease-out 0s;
+    color: #1B1B1B;
+} 
+
+.center p{
+    font-family: 'Whitney-Book';
+    color: #9fa0a1;
+    text-decoration: none;
+    font-size: 14px;
+    padding:10px;
+    width: 280px;
+    margin: 0 auto;
+}
+
+footer .right ul {
+    float: right;
+
+}footer .right ul li{
+    margin: 0 10px;
+}
+
+
+
+
+
+/* 
+!!!!!   POPIN
+    !!!!! 
+*/
+
+#popin{
+    display: none;
+    position:fixed;
+    z-index: 2;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.6);
+    z-index:5;
+    width:100%;
+    text-align: center;
+    height:100%;
+}
+
+.signin{
+    display: inline-block;
+    width:620px;
+    height: 650px;
+    border-radius: 5px;
+    margin:10% auto;
+    background: #469fe9; /* Old browsers */
+    background: -moz-linear-gradient(left,  #469fe9 0%, #1c4eaa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#469fe9), color-stop(100%,#1c4eaa)); 
+    background: -webkit-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* IE10+ */
+    background: linear-gradient(to right,  #469fe9 0%,#1c4eaa 100%); /* W3C */
+    overflow: hidden;
+}
+
+.signin h1 {
+    font-family: 'Gotham-Bold';
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #0e5eb0;
+    text-align: center;
+    padding-top: 18px;
+}
+
+.close{
+  position: relative;
+  z-index: 5;
+  top: -20px;
+  left: 285px;
+}
+
+.head_form {
+    display: block;
+    margin: 0 auto;
+    widht:614px;
+    height: 50px;
+    background-color: #Fff;
+    border-radius: 5px 5px 0 0;
+    -webkit-box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    -moz-box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+}
+
+form {
+    width: 560px;
+    height: 550px;
+    margin: 25px;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    -moz-box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    padding: 5px 30px;
+    box-sizing:border-box;
+}
+
+
+form h2 {
+    width: 460px;
+    font-size: 12px;
+    font-family: 'Gotham-Bold';
+    text-transform: uppercase;
+    text-align: center;
+    color: #1B1B1B;
+    line-height: 15px;
+}
+
+label {
+    font-family: 'Gotham-Bold';
+    font-size: 10px;
+    color: #1b1b1b;
+    display: inline-block;
+    text-align: left;
+    margin:10px 5px; 
+    text-transform: uppercase;
+}
+.main {
+    width: 210px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 10px;margin-top: 5px;
+    border: 1px solid #eaeaea;
+}
+
+.large {
+    width: 450px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 10px;margin-top: 5px;
+    border: 1px solid #eaeaea;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 139px;
+    height: 54px;
+    background: url(../assets/button_form.png) no-repeat;
+    border: none;
+    font-family: 'Gotham-Book';
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 50px;
+    color: #0e5eb0;
+    transition: all 0.5s ease-out 0s;
+}
+
+.btn:hover{
+    transition: all 0.5s ease-out 0s;
+    border-radius: 50px;
+    background: none;
+    background: #469fe9; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #469fe9 1%, #1c4eaa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#469fe9), color-stop(100%,#1c4eaa)); 
+    background: -webkit-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* IE10+ */
+    background: linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* W3C */
+    color: #fff;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 1380px) {
+    .container{
+        margin:0 auto;
+        width: 100%;
+        overflow: hidden;
+    }
+    .nav {
+        display: none;
+    }
+    #cover, #howto, #pricing, #aboutus, #mobileapp {
+        width: 100%;
+    }
+
+    header, footer {
+        width: 100%;
+    }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg>
+<metadata>
+Created by FontForge 20110222 at Sat Jun  6 13:50:40 2015
+ By www-data
+HTF Gothama (c) 2000 The Hoefler Type Foundry, Inc. Info: www.typography.com
+</metadata>
+<defs>
+<font id="Gotham-Book" horiz-adv-x="1000" >
+  <font-face 
+    font-family="Gotham-Book"
+    font-weight="550"
+    font-stretch="normal"
+    units-per-em="1000"
+    panose-1="2 0 6 4 4 0 0 2 0 4"
+    ascent="800"
+    descent="-200"
+    x-height="528"
+    bbox="41 -162 870 730"
+    underline-thickness="20"
+    underline-position="-113"
+    unicode-range="U+0061-0074"
+  />
+<missing-glyph 
+ />
+    <glyph glyph-name=".notdef" 
+ />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" 
+ />
+    <glyph glyph-name="a" unicode="a" horiz-adv-x="579" 
+d="M240 -11q-78 0 -135.5 43t-57.5 118v2q0 81 60 125t161 44q80 0 158 -22v16q0 68 -40 104t-113 36q-76 0 -157 -37l-23 63q96 44 188 44q110 0 167 -57q54 -54 54 -152v-316h-76v77q-69 -88 -186 -88zM255 51q72 0 122 39t50 100v48q-76 22 -151 22q-71 0 -111 -28.5
+t-40 -75.5v-2q0 -47 37.5 -75t92.5 -28z" />
+    <glyph glyph-name="g" unicode="g" horiz-adv-x="664" 
+d="M315 -162q-131 0 -235 72l35 60q91 -66 199 -66q87 0 137.5 47.5t50.5 136.5v61q-82 -109 -203 -109q-98 0 -170.5 67.5t-72.5 174.5v2q0 109 73 176.5t170 67.5q124 0 202 -104v93h77v-427q0 -117 -66 -183q-69 -69 -197 -69zM314 108q76 0 133 49.5t57 125.5v2
+q0 77 -56.5 126t-133.5 49q-75 0 -127 -48t-52 -126v-2q0 -76 52.5 -126t126.5 -50z" />
+    <glyph glyph-name="h" unicode="h" horiz-adv-x="616" 
+d="M86 0v730h77v-303q61 101 177 101q92 0 145 -56.5t53 -150.5v-321h-77v302q0 73 -37.5 114.5t-105.5 41.5q-67 0 -111 -45t-44 -117v-296h-77z" />
+    <glyph glyph-name="m" unicode="m" horiz-adv-x="951" 
+d="M86 0v517h77v-87q65 98 167 98q116 0 166 -103q67 103 182 103q89 0 140.5 -56t51.5 -152v-320h-77v302q0 75 -35.5 115.5t-98.5 40.5q-61 0 -102 -43t-41 -117v-298h-76v304q0 72 -35.5 113t-97.5 41t-103 -46t-41 -117v-295h-77z" />
+    <glyph glyph-name="o" unicode="o" horiz-adv-x="646" 
+d="M322 -12q-115 0 -191.5 78.5t-76.5 189.5v2q0 111 77.5 190.5t192.5 79.5t192 -78.5t77 -189.5v-2q0 -111 -78 -190.5t-193 -79.5zM324 57q83 0 136.5 58t53.5 141v2q0 84 -55.5 143t-136.5 59q-82 0 -135.5 -58.5t-53.5 -141.5v-2q0 -84 55 -142.5t136 -58.5z" />
+    <glyph glyph-name="t" unicode="t" horiz-adv-x="404" 
+d="M259 -9q-67 0 -106.5 35.5t-39.5 110.5v312h-72v68h72v156h77v-156h164v-68h-164v-302q0 -86 87 -86q38 0 75 18v-66q-42 -22 -93 -22z" />
+    <hkern u1="a" u2="t" k="5" />
+    <hkern u1="t" u2="o" k="15" />
+    <hkern u1="t" u2="g" k="15" />
+  </font>
+</defs></svg>

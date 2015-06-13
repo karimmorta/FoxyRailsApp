@@ -1,0 +1,179 @@
+/**
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://cssreset.com
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: font-url('fonts/Gotham-Light.eot');
+    src: font-url('fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+         font-url('fonts/Gotham-Light.woff') format('woff'),
+         font-url('fonts/Gotham-Light.ttf') format('truetype'),
+         font-url('fonts/Gotham-Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: font-url('fonts/Gotham-Book.eot');
+    src: font-url('fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+         font-url('fonts/Gotham-Book.woff') format('woff'),
+         font-url('fonts/Gotham-Book.ttf') format('truetype'),
+         font-url('fonts/Gotham-Book.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: font-url('Gotham-Bold.eot');
+    src: font-url('Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+         font-url('Gotham-Bold.woff') format('woff'),
+         font-url('Gotham-Bold.ttf') format('truetype'),
+         font-url('Gotham-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Ultra';
+    src: font-url('Gotham-Ultra.eot');
+    src: font-url('Gotham-Ultra.eot?#iefix') format('embedded-opentype'),
+         font-url('Gotham-Ultra.woff') format('woff'),
+         font-url('Gotham-Ultra.ttf') format('truetype'),
+         font-url('Gotham-Ultra.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whitney-Book';
+    src: font-url('Whitney-Book.eot');
+    src: font-url('Whitney-Book.eot?#iefix') format('embedded-opentype'),
+         font-url('Whitney-Book.woff') format('woff'),
+         font-url('Whitney-Book.ttf') format('truetype'),
+         font-url('Whitney-Book.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whitney-BookSC';
+    src: font-url('Whitney-BookSC.eot');
+    src: font-url('Whitney-BookSC.eot?#iefix') format('embedded-opentype'),
+         font-url('Whitney-BookSC.woff') format('woff'),
+         font-url('Whitney-BookSC.ttf') format('truetype'),
+         font-url('Whitney-BookSC.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whitney-Medium';
+    src: font-url('Whitney-Medium.eot');
+    src: font-url('Whitney-Medium.eot?#iefix') format('embedded-opentype'),
+         font-url('Whitney-Medium.woff') format('woff'),
+         font-url('Whitney-Medium.ttf') format('truetype'),
+         font-url('Whitney-Medium.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whitney-Bold';
+    src: font-url('Whitney-Bold.eot');
+    src: font-url('Whitney-Bold.eot?#iefix') format('embedded-opentype'),
+         font-url('Whitney-Bold.woff') format('woff'),
+         font-url('Whitney-Bold.ttf') format('truetype'),
+         font-url('Whitney-Bold.svg#whitney_bookregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.clear {
+    clear: both;
+}
