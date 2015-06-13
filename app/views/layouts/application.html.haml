@@ -4,10 +4,12 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" }
     %title Foxy
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    / = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag "application", params[:controller], :media => "all"
     = javascript_include_tag "//www.google.com/jsapi", "chartkick"
     / = javascript_include_tag "path/to/highcharts.js", "chartkick"
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    / = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', params[:controller],'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     / = link_to 'bwin', 'https://sports.bwin.fr/fr/sports/4/paris-sportifs/football#sportId=4/fr/betslip/betslip/add?optionId=4%2F21690%2F4352510%2F99593973%2F327181122&odds=6.00&optionId=4%2F21558%2F4422389%2F102980746%2F337871727&odds=1.50', method: "POST", target: '_blank'
