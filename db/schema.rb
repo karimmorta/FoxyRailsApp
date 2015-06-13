@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150604215308) do
+ActiveRecord::Schema.define(version: 20150611081930) do
 
   create_table "divisions", force: :cascade do |t|
     t.string   "name"
@@ -120,6 +120,7 @@ ActiveRecord::Schema.define(version: 20150604215308) do
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float    "amount"
   end
 
   create_table "players", force: :cascade do |t|
@@ -150,6 +151,7 @@ ActiveRecord::Schema.define(version: 20150604215308) do
     t.float    "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float    "avg_bet"
   end
 
   create_table "user_scores", force: :cascade do |t|

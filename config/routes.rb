@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'home#index'
   resources :picks
 
   resources :tipsters
@@ -12,8 +13,6 @@ Rails.application.routes.draw do
   resources :games
 
   devise_for :users
-  root 'tips#index'
-  resources :tips
   get 'landing', to: 'landing#index'
   post 'register_email', to: 'landing#register'
   
