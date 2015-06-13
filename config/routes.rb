@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   devise_for :users
   get 'landing', to: 'landing#index'
   post 'register_email', to: 'landing#register'
+
+  get 'dashboard', to: 'dashboard#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
