@@ -165,7 +165,7 @@ header ul li a:hover {
     height:740px;
     margin:0;
     padding:200px 0;
-    background: asset-url../assets/bg_cover.png) no-repeat center; 
+    background: asset-url(../assets/bg_cover.png) no-repeat center; 
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
     background-size: cover; /* version standardisée */
     vertical-align: middle;
@@ -249,7 +249,7 @@ header ul li a:hover {
     width:956px;
     height: 553px;
     margin: -150px auto 0;
-    background: asset-url../assets/video_bg.png) no-repeat center; 
+    background: asset-url(../assets/video_bg.png) no-repeat center; 
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
     background-size: cover; /* version standardisée */
 }
@@ -721,7 +721,7 @@ label {
     margin-top: 20px;
     width: 139px;
     height: 54px;
-    background: asset-url../assets/button_form.png) no-repeat;
+    background: asset-url(../assets/button_form.png) no-repeat;
     border: none;
     font-family: 'Gotham-Book';
     text-transform: uppercase;
