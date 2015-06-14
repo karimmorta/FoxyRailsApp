@@ -3,6 +3,7 @@
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
 var btn;
+var btn_search;
 var h;
 var donnee;
 var id =1;
@@ -14,9 +15,16 @@ function datamind(){
     offensive_ranking(null);
     quarter_stats(null);
     btn.on('click', quarter_stats);
+    btn_search.on('click', open_search);
   });
 }
 
+function open_search(e) {
+    e.preventDefault
+    $('.search_open').removeClass(' display_off');
+    $('.search_open').addClass(' display_on');
+    return;
+};
 
 function quarter_stats(e) {
   if(e != null && e != undefined && e != '') {    
@@ -65,6 +73,7 @@ function offensive_ranking(e){
 
 $(document).ready(function() {
   btn = $('.target');
+  btn_search = $('.search');
   datamind();
 });
 
