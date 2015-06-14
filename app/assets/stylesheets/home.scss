@@ -300,11 +300,16 @@ header ul li a:hover {
 }
 
 .features{
+    position: relative;
+    border-radius: 5px;
     display: inline-block;
-    width: 430px;
+    width: 416px;
     text-align: center;
     box-sizing:border-box;
-    padding: 60px 20px;
+    margin: 20px 10px;
+    padding: 15px 20px;
+    background: #fff;
+    transition: all 1s ease-out;
 }
 
 
@@ -342,8 +347,57 @@ H4 span {
     font-size: 18px;
     line-height: 25px;
     color: #1B1B1B;
+    padding-bottom: 15px;
 }
 
+.features:hover {
+    background: #469fe9; /* Old browsers */
+    background: -moz-linear-gradient(left,  #469fe9 0%, #1c4eaa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#469fe9), color-stop(100%,#1c4eaa)); 
+    background: -webkit-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* IE10+ */
+    background: linear-gradient(to right,  #469fe9 0%,#1c4eaa 100%); /* W3C */
+    -webkit-box-shadow: 3px 3px 23px rgba(0,0,0,0.2);
+    -moz-box-shadow: 3px 3px 23px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 23px rgba(0,0,0,0.2);
+    transition: background 0.5s ease-out 0s;
+}
+
+
+.icon {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 230px;
+    height: 230px;
+}
+svg {
+    // display: none; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    }
+
+.features:hover .border_features {
+    position: absolute;
+}
+
+.features:hover p, .features:hover h4{color: #fff;transition: all 0.5s ease-out ;}  
+
+.features:hover .icon_01 { background: asset-url("roll_01.png") no-repeat center;}
+.features:hover .icon_02 { background: asset-url("roll_02.png") no-repeat center;}
+.features:hover .icon_03 { background: asset-url("roll_03.png") no-repeat center;}
+.features:hover .icon_04 { background: asset-url("roll_04.png") no-repeat center;}
+.features:hover .icon_05 { background: asset-url("roll_05.png") no-repeat center;}
+
+.icon_01 { background: asset-url("ico_01.png") no-repeat center; transition: all 0.5s ease-out ;}
+.icon_02 { background: asset-url("ico_02.png") no-repeat center; transition: all 0.5s ease-out ;}
+.icon_03 { background: asset-url("ico_03.png") no-repeat center; transition: all 0.5s ease-out ;}
+.icon_04 { background: asset-url("ico_04.png") no-repeat center; transition: all 0.5s ease-out ;}
+.icon_05 { background: asset-url("ico_05.png") no-repeat center; transition: all 0.5s ease-out ;}
 
 
 
@@ -465,8 +519,6 @@ H4 span {
     background: -ms-linear-gradient(left,  #bb44bb 0%,#8f11b9 100%); /* IE10+ */
     background: linear-gradient(to right,  #bb44bb 0%,#8f11b9 100%); /* W3C */
 }
-
-
 
 
 
