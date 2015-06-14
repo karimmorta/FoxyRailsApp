@@ -1,7 +1,7 @@
 <div class="container">
   <header>
 	<div class="logo">
-	  <img src="assets/logo.png" alt="">
+	  <%= image_tag asset_url 'logo.png'%>
 	</div>
 	<div class="baseline">
 	  <h2>enhance your sports betting analysis</h2>
@@ -22,11 +22,11 @@
 	  </div>
 	  <div class="connected">
 		<a href="">
-		  <img src="assets/profile.png" alt="">
+			<%= image_tag asset_url 'profile.png'%>
 		  <p>Phillipe</p>
 		</a>
-		<a href="" class="btn notif"><img src="assets/notif_icon.png" alt=""></a>
-		<a href="" class="btn close-sessionv"><img src="assets/close_session_icon.png" alt=""></a>
+		<a href="" class="btn notif"><%= image_tag asset_url 'notif_icon.png'%></a>
+		<a href="" class="btn close-sessionv"><%= image_tag asset_url 'close_session_icon.png'%></a>
 	  </div>
 	</div>
 
@@ -53,16 +53,16 @@
 	  <div class="two-column">
 		<div class="head">
 		  <div class="title home">
-			<img src="assets/fanion_juve.png" alt="">
+		  <%= image_tag asset_url 'fanion_juve.png'%>
 			<h3>Juventus F.C</h3>
 		  </div>
 		  <div class="title away">
 			<h3>F.C Barcelona</h3>
-			<img src="assets/fanion_barca.png" alt="">
+			<%= image_tag asset_url 'fanion_barca.png'%>
 		  </div>
 		</div>
-		<img src="assets/maglia_juve.png" alt="" class="shirt_home">
-		<img src="assets/maglia_barca.png" alt="" class="shirt_away">
+		<%= image_tag asset_url 'maglia_juve.png', class: "shirt_home"%>
+		<%= image_tag asset_url 'maglia_barca.png', class: "shirt_away"%>
 		<div class="info_game">
 		  <p class="date"><span class="bg"><span class="text_date">SAMEDI 6 JUIN 2015 - 20h45</span></span></p>
 		  <p class="others_infos">
@@ -80,7 +80,7 @@
 	  </div>
 	  <div class="one-column buy-tips">
 		<div class="w-pattern"></div>
-		<img src="assets/buy_lock.png" alt="">
+		<%= image_tag asset_url 'buy_lock.png'%>
 		<p><span class="gras">unlock</span><br>our recommendation</p>
 		<a href="" class="cta-buy">Buy our Tips</a>
 	  </div>
@@ -88,9 +88,9 @@
 	<div class="data-content">
 	  <div class="one-column">
 		<div class="head">
-		  <div class="drag"><img src="assets/drag_icon.png" alt=""></div>
+		  <div class="drag"><%= image_tag asset_url 'drag_icon.png'%></div>
 		  <p class="title_block">Offensive ranking</p>
-		  <div class="settings"><a href=""><img src="assets/settings_icon.png" alt=""></a></div>
+		  <div class="settings"><a href=""><%= image_tag asset_url 'settings_icon.png'%></a></div>
 		</div>
 		<div class="o_content">
 		  <div class="o_home">
@@ -141,8 +141,8 @@
 				</svg>
 				<span class="player_number">10</span>
 				<span class="player_firstname">Lionel</span>
-				<span class="player_name">Messi</span>	
-				<img src="assets/arrow_player.png" alt="">
+				<span class="player_name">Messi</span>
+				<%= image_tag asset_url 'arrow_player.png'%>
 			</a>
 		</div>
 		<img src="assets/player_messi.png" alt="" class="player_visu">
@@ -150,9 +150,9 @@
 
 	  <div class="two-column">
 		<div class="head">
-		  <div class="drag"><img src="assets/drag_icon.png" alt=""></div>
+		  <div class="drag"><%= image_tag asset_url 'drag_icon.png'%></div>
 		  <p class="title_block">Quarter Statistics</p>
-		  <div class="settings"><a href=""><img src="assets/settings_icon.png" alt=""></a></div>
+		  <div class="settings"><a href=""><%= image_tag asset_url 'settings_icon.png'%></a></div>
 		</div>
 		<div class="q_subnav">
 		  <ul>
@@ -228,103 +228,103 @@
 	  </div>
 	  
 	  <div class="one-column untouch">
-		<img src="assets/stats_lock.png" alt="" class="locked">
+	  <%= image_tag asset_url 'stats_lock.png', class: "locked"%>
 		<p class="txt_locked">UNAVAILABLE</p>
 		<a href="" class="cta_unlock">
 		  <h4>GO PRO</h4>
 		  <p>to unlock more prominent statistics</p>
-		  <img src="assets/arrow_cta.png" alt="">
+		  <%= image_tag asset_url 'arrow_cta.png'%>
 		</a>
 		<div class="blur">
 		  <div class="head">
-			<div class="drag"><img src="assets/drag_icon.png" alt=""></div>
+			<div class="drag"><%= image_tag asset_url 'drag_icon.png'%></div>
 			<p class="title_block">Head to Head</p>
-			<div class="settings"><a href=""><img src="assets/settings_icon.png" alt=""></a></div>
+			<div class="settings"><a href=""><%= image_tag asset_url 'settings_icon.png'%></a></div>
 		  </div>
 		</div>
 	  </div>
 	  
 	  <div class="one-column untouch">
-		<img src="assets/stats_lock.png" alt="" class="locked">
+	  <%= image_tag asset_url 'stats_lock.png', class: "locked"%>
 		<p class="txt_locked">UNAVAILABLE</p>
 		<a href="" class="cta_unlock">
 		  <h4>GO PRO</h4>
 		  <p>to unlock more prominent statistics</p>
-		  <img src="assets/arrow_cta.png" alt="">
+		  <%= image_tag asset_url 'arrow_cta.png'%>
 		</a>
 		<div class="blur">
 		  <div class="head">
-			<div class="drag"><img src="assets/drag_icon.png" alt=""></div>
+			<div class="drag"><%= image_tag asset_url 'drag_icon.png'%></div>
 			<p class="title_block">Head to Head</p>
-			<div class="settings"><a href=""><img src="assets/settings_icon.png" alt=""></a></div>
+			<div class="settings"><a href=""><%= image_tag asset_url 'settings_icon.png'%></a></div>
 		  </div>
 		</div>
 	  </div>
 		  
 	  <div class="one-column untouch">
-		<img src="assets/stats_lock.png" alt="" class="locked">
+	  <%= image_tag asset_url 'stats_lock.png', class: "locked"%>
 		<p class="txt_locked">UNAVAILABLE</p>
 		<a href="" class="cta_unlock">
 		  <h4>GO PRO</h4>
 		  <p>to unlock more prominent statistics</p>
-		  <img src="assets/arrow_cta.png" alt="">
+		  <%= image_tag asset_url 'arrow_cta.png'%>
 		</a>
 		<div class="blur">
 		  <div class="head">
-			<div class="drag"><img src="assets/drag_icon.png" alt=""></div>
+			<div class="drag"><%= image_tag asset_url 'drag_icon.png'%></div>
 			<p class="title_block">Head to Head</p>
-			<div class="settings"><a href=""><img src="assets/settings_icon.png" alt=""></a></div>
+			<div class="settings"><a href=""><%= image_tag asset_url 'settings_icon.png'%></a></div>
 		  </div>
 		</div>
 	  </div>
 		  
 	  <div class="one-column untouch">
-		<img src="assets/stats_lock.png" alt="" class="locked">
+		<%= image_tag asset_url 'stats_lock.png'%>
 		<p class="txt_locked">UNAVAILABLE</p>
 		<a href="" class="cta_unlock">
 		  <h4>GO PRO</h4>
 		  <p>to unlock more prominent statistics</p>
-		  <img src="assets/arrow_cta.png" alt="">
+		  <%= image_tag asset_url 'arrow_cta.png'%>
 		</a>
 		<div class="blur">
 		  <div class="head">
-			<div class="drag"><img src="assets/drag_icon.png" alt=""></div>
+			<div class="drag"><%= image_tag asset_url 'drag_icon.png'%></div>
 			<p class="title_block">Head to Head</p>
-			<div class="settings"><a href=""><img src="assets/settings_icon.png" alt=""></a></div>
+			<div class="settings"><a href=""><%= image_tag asset_url 'settings_icon.png'%></a></div>
 		  </div>
 		</div>
 	  </div>
 		  
 	  <div class="one-column untouch">
-		<img src="assets/stats_lock.png" alt="" class="locked">
+		<%= image_tag asset_url 'stats_lock.png', class: "locked"%>
 		<p class="txt_locked">UNAVAILABLE</p>
 		<a href="" class="cta_unlock">
 		  <h4>GO PRO</h4>
 		  <p>to unlock more prominent statistics</p>
-		  <img src="assets/arrow_cta.png" alt="">
+		  <%= image_tag asset_url 'arrow_cta.png'%>
 		</a>
 		<div class="blur">
 		  <div class="head">
-			<div class="drag"><img src="assets/drag_icon.png" alt=""></div>
+			<div class="drag"><%= image_tag asset_url 'drag_icon.png'%></div>
 			<p class="title_block">Head to Head</p>
-			<div class="settings"><a href=""><img src="assets/settings_icon.png" alt=""></a></div>
+			<div class="settings"><a href=""><%= image_tag asset_url 'settings_icon.png'%></a></div>
 		  </div>
 		</div>
 	  </div>
 		  
 	  <div class="one-column untouch">
-		<img src="assets/stats_lock.png" alt="" class="locked">
+	  <%= image_tag asset_url 'stats_lock.png', class: "locked"%>
 		<p class="txt_locked">UNAVAILABLE</p>
 		<a href="" class="cta_unlock">
 		  <h4>GO PRO</h4>
 		  <p>to unlock more prominent statistics</p>
-		  <img src="assets/arrow_cta.png" alt="">
+		  <%= image_tag asset_url 'arrow_cta.png'%>
 		</a>
 		<div class="blur">
 		  <div class="head">
-			<div class="drag"><img src="assets/drag_icon.png" alt=""></div>
+			<div class="drag"><%= image_tag asset_url 'drag_icon.png'%></div>
 			<p class="title_block">Head to Head</p>
-			<div class="settings"><a href=""><img src="assets/settings_icon.png" alt=""></a></div>
+			<div class="settings"><a href=""><%= image_tag asset_url 'settings_icon.png'%></a></div>
 		  </div>
 		</div>
 	  </div>
@@ -333,9 +333,9 @@
 	<div class="sidebar">
 	  <div class="one-column">
 		<div class="head">
-		  <div class="drag"><img src="assets/drag_icon.png" alt=""></div>
+		  <div class="drag"><%= image_tag asset_url 'drag_icon.png'%></div>
 		  <p class="title_block">Odds Comparator</p>
-		  <div class="settings"><a href=""><img src="assets/settings_icon.png" alt=""></a></div>
+		  <div class="settings"><a href=""><%= image_tag asset_url 'settings_icon.png'%></a></div>
 		</div>
 	  </div>  
 	</div>
@@ -355,9 +355,9 @@
   <div class="center"><p>Copyright © 2015 foxtips.io all rights reserved</p></div>
   <div class="right">
 	<ul>
-	  <li><a href=""><img src="assets/twitter.png" alt=""></a></li>
-	  <li><a href=""><img src="assets/fb.png" alt=""></a></li>
-	  <li><a href=""><img src="assets/insta.png" alt=""></a></li>
+	  <li><a href=""><%= image_tag asset_url 'twitter.png'%></a></li>
+     <li><a href=""><%= image_tag asset_url 'fb.png'%></a></li>
+     <li><a href=""><%= image_tag asset_url 'insta.png'%></a></li>
 	</ul>     
   </div>
 </footer>
