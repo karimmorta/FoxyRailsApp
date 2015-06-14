@@ -145,7 +145,7 @@
 				<%= image_tag asset_url 'arrow_player.png'%>
 			</a>
 		</div>
-		<img src="assets/player_messi.png" alt="" class="player_visu">
+		<%= image_tag (asset_url 'player_messi.png'), class: "player_visu" %>
 	  </div>
 
 	  <div class="two-column">
@@ -279,7 +279,7 @@
 	  </div>
 		  
 	  <div class="one-column untouch">
-		<%= image_tag asset_url 'stats_lock.png'%>
+		<%= image_tag (asset_url 'stats_lock.png'), class: "locked"%>
 		<p class="txt_locked">UNAVAILABLE</p>
 		<a href="" class="cta_unlock">
 		  <h4>GO PRO</h4>
