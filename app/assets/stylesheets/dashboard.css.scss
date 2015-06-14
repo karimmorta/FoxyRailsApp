@@ -172,7 +172,7 @@ h2{
     content:'';
     width: 60px;
     height: 60px;
-    background: url("soccer_icon.png") center no-repeat;
+    background: asset-url("soccer_icon.png") center no-repeat;
 }
 
 .nav_soccer ul {
@@ -219,7 +219,7 @@ h2{
     display: block;
     width: 60px;
     height: 60px;
-    background: url('search_icon.png') center no-repeat;
+    background: asset-url('search_icon.png') center no-repeat;
 }
 
 .search:hover{
@@ -278,7 +278,7 @@ h2{
 .connected a p:after {
     display: inline-block;
     content: '';
-    background: url('arrow_profile.png') no-repeat center;
+    background: asset-url('arrow_profile.png') no-repeat center;
     width: 10px;
     height:10px;
     margin-left: 5px;
@@ -531,7 +531,7 @@ p.others_infos {
 .upgrade:before {
     display: inline-block;
     content: '';
-    background: url('arrow_up.png') no-repeat center;
+    background: asset-url('arrow_up.png') no-repeat center;
     width: 10px;
     height: 11px;
     margin-right: 4px;
@@ -540,7 +540,7 @@ p.others_infos {
 .downgrade:before{
     display: inline-block;
     content: '';
-    background: url('arrow_down.png') no-repeat center;
+    background: asset-url('arrow_down.png') no-repeat center;
     width: 10px;
     height: 11px;
     margin-right: 4px;
@@ -549,7 +549,7 @@ p.others_infos {
 .stable:before{
     display: inline-block;
     content: '';
-    background: url('egal.png') no-repeat center;
+    background: asset-url('egal.png') no-repeat center;
     width: 10px;
     height: 11px;
     margin-right: 4px;
@@ -640,7 +640,7 @@ ONE COLUMN
     -o-filter: blur(10px);
     filter: blur(10px);
     opacity: 0.8;
-    background: url('stats_bg.png') no-repeat center;
+    background: asset-url('stats_bg.png') no-repeat center;
 }
 
 .locked {
@@ -764,7 +764,7 @@ ONE COLUMN
     width: 100%;
     box-sizing:border-box;
     height: 100%;
-    background: url('pattern.png') repeat;
+    background: asset-url('pattern.png') repeat;
     background-position: 0 -100px;
     background-size: 50%;
     -webkit-animation : scrollY 25s linear infinite;
@@ -883,7 +883,7 @@ DATA TREATMENT
     margin-left: 4px;
     display: inline-block;
     content:'';
-    background: url('arrow_up.png');
+    background: asset-url('arrow_up.png');
     width: 10px;
     height: 10px;
 }
@@ -909,7 +909,7 @@ ul.o_val li{
 } 
 
 .barchart {
-    background: url("barchart_pattern.png") repeat center;
+    background: asset-url("barchart_pattern.png") repeat center;
     background-position-y: 32px;
     display: block;
     width: 80%;
