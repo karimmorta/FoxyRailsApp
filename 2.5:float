@@ -1,2 +1,0 @@
-      invoke  active_record
-      remove    db/migrate/20150602162044_add_betting_odds_to_games.rb
