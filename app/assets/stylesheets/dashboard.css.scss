@@ -661,6 +661,7 @@ ONE COLUMN
 }
 
 .cta_unlock{
+    cursor: not-Allowed;
     font-size: 10px;
     z-index: 1;
     position: absolute;
@@ -887,8 +888,29 @@ DATA TREATMENT
     height: 10px;
 }
 
+ul.o_val {
+    display: inline-block;
+    position: absolute;
+    bottom: 35px;
+    left: 0px;
+    width: 35px;
+    opacity: 0.3;
+} 
+
+ul.o_val li{
+    display:block;
+    font-size: 10px;
+    font-family: 'Gotham-Book';
+    font-weight: 100;
+    color: #1B1B1B;
+    text-align: right;
+    margin: 40px 0 0 0;
+
+} 
+
 .barchart {
     background: url("barchart_pattern.png") repeat center;
+    background-position-y: 32px;
     display: block;
     width: 80%;
     height: 222px;
@@ -960,13 +982,95 @@ DATA TREATMENT
     text-align: center;
 }
 
+/* PLAYER */
+/* PLAYER */
+/* PLAYER */
+/* PLAYER */
+/* PLAYER */
+/* PLAYER */
+.player {
+    cursor:default;
+    box-shadow: none !important;
+}
+.head_player {
+    position: relative;
+    height: 115px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.head_player svg {
+    position: absolute;
+    top: 0;
+}
+.head_player .player_title_full {
+    position: absolute;
+    left: 0;
+}
+.head_player .player_title_mid {
+    position: absolute;
+    right: 0;
+}
+.head_player img {
+    position: absolute;
+    right: 139px;
+    top: 41.5px;
+}
+
+.player_visu {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.head_player span.player_firstname {
+    position: absolute;
+    display: inline-block;
+    font-family: 'Gotham-Bold';
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #fff;
+    left: 23px;
+    top: 35px;
+}
+.head_player span.player_name {
+    position: absolute;
+    display: inline-block;
+    font-family: 'Gotham-Book';
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 46px;
+    color: #fff;
+    left: 20px;
+    top: 50px;
+}
+
+.head_player span.player_number {
+    position: absolute;
+    font-family: 'Gotham-Bold';
+    font-size: 140px;
+    color: rgba(0,0,0,0.1);
+    left: 30px;
+    bottom: -35px;
+}
+
+
+
+
+
+
+
+/*QUARTER*/
+/*QUARTER*/
+/*QUARTER*/
+/*QUARTER*/
 
 .q_subnav {
     width: 100%;
     display: inline-block;
     background: #1B1B1B;
     height: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 }
 
 .q_subnav ul {
@@ -999,18 +1103,106 @@ DATA TREATMENT
 }
 
 .q_infos {
+    vertical-align: top;
     display: inline-block;
     width: 50%;
     height: 250px;
     box-sizing: border-box;
-    background-color: red;
 }
+
+.q_title {
+    box-sizing: border-box;
+    padding: 30px 0 10px 20px;
+    display: inline-block;
+    font-size: 20px;
+    color: #1B1B1B;
+    text-transform: uppercase;
+    font-family: 'Gotham-Light';
+}
+
+.q_title .sub {
+    text-transform: none;
+    font-family: 'Whitney-Book';
+    font-size: 15px;
+}
+
+ul.explicit_stats{
+    display: block;
+    width:100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+ul.explicit_stats li {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+ul.explicit_stats li a{
+    text-decoration: none;
+    display: block;
+    font-family: 'Gotham-Bold';
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.fav {opacity: 1 !important;}
+
+ul.explicit_stats li a .big_stats{ font-size: 50px;}
+
+
+
+.q_explicit_legend {
+    box-sizing: border-box;
+    padding: 10px 20px 20px 20px;
+    display: block;
+    width: 100%;
+}
+
+.q_explicit_legend p {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 3px 0;
+    text-transform: uppercase;
+    font-family: 'Gotham-Bold';
+}
+
+p.title:after {
+    content: '';
+    display: inline-block;
+    width: 80%;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eaeaea;
+}
+p.q_home:before {
+    display: inline-block;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    margin-right: 5px;
+    border: 2px solid #6d8ce0;
+}
+p.q_away:before {
+    display: inline-block;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    margin-right: 5px;
+    border: 2px solid #a50044;
+}
+.q_home { color: #5978cc;}
+.q_away { color: #a50044;}
 
 .q_chart {
     position: relative;
     display: inline-block;
     width: 50%;
-    height: 222px;
+    height: 250px;
     padding-top: 30px;
 }
 
@@ -1018,7 +1210,27 @@ DATA TREATMENT
     text-align: center;
 }
 
+.q_chart .barchart {
+    background-position-y: 10px; 
+}
+.q_chart ul.q_val {
+    display: inline-block;
+    position: absolute;
+    bottom: 35px;
+    left: 0px;
+    width: 35px;
+    opacity: 0.3;
+} 
+.q_chart ul.q_val li{
+    display:block;
+    font-size: 10px;
+    font-family: 'Gotham-Book';
+    font-weight: 100;
+    color: #1B1B1B;
+    text-align: right;
+    margin: 40px 0 0 0;
 
+} 
 /* FOOTER */
 /* FOOTER */
 /* FOOTER */
