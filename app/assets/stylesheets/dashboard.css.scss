@@ -1230,7 +1230,78 @@ p.q_away:before {
     text-align: right;
     margin: 40px 0 0 0;
 
-} 
+}
+
+
+/* SEARCH */
+/* SEARCH */
+/* SEARCH */
+/* SEARCH */
+/* SEARCH */
+/* SEARCH */
+
+
+.search_open {
+    z-index: 2;
+    position: fixed;
+    top: 124px;
+    width: 1380px;
+    height: 100%;
+}
+.search_open form {
+    width: 1380px;
+    position: fixed;
+    z-index: 3;
+}
+
+.search_open form input[type="search"] {
+    text-decoration:none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    color: #fff;
+    height: 90px;
+    font-size: 50px;
+    font-family: 'Gotham-Light';
+    background: #469fe9; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #469fe9 1%, #1c4eaa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#469fe9), color-stop(100%,#1c4eaa)); 
+    background: -webkit-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* IE10+ */
+    background: linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* W3C */
+}
+input[type="search"]::-webkit-input-placeholder { color:rgba(255,255,255,0.2); }
+input[type="search"]::-moz-placeholder { color:rgba(255,255,255,0.2); } /* firefox 19+ */
+input[type="search"]:-ms-input-placeholder { color:rgba(255,255,255,0.2); } /* ie */
+input[type="search"]:-moz-placeholder { color:rgba(255,255,255,0.2); }
+
+.search_open .overlay {
+    z-index: 2;
+    top: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.65);
+    width: 100%;
+    height: 100%;
+}
+
+.search_open .search_results {
+    position: fixed;
+    top: 214px;
+    z-index: 2;
+    display: block;
+    width: 1380px;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 10px;
+    background: #fff;
+}
+
+
+.display_off {display: none;}
+.display_on {display: block ;}
 /* FOOTER */
 /* FOOTER */
 /* FOOTER */
