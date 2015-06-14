@@ -1308,6 +1308,7 @@ input[type="search"]:-moz-placeholder { color:rgba(255,255,255,0.2); }
 
 .display_on {display: block ;
 }
+
 /* FOOTER */
 /* FOOTER */
 /* FOOTER */
@@ -1377,6 +1378,236 @@ footer .right ul {
 }footer .right ul li{
     margin: 0 10px;
 }
+
+
+/* 
+!!!!!   POPIN
+    !!!!! 
+*/
+
+#popin{
+    display: none;
+    position:fixed;
+    z-index: 2;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.6);
+    z-index:5;
+    width:100%;
+    text-align: center;
+    height:100%;
+}
+
+#popin .tips{
+    display: inline-block;
+    max-width: 1080px;
+    // height: 650px;
+    border-radius: 5px;
+    margin:10% auto;
+    background: #469fe9; /* Old browsers */
+    background: -moz-linear-gradient(left,  #469fe9 0%, #1c4eaa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#469fe9), color-stop(100%,#1c4eaa)); 
+    background: -webkit-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #469fe9 0%,#1c4eaa 100%); /* IE10+ */
+    background: linear-gradient(to right,  #469fe9 0%,#1c4eaa 100%); /* W3C */
+    overflow: hidden;
+}
+#popin .tips a{ float: right;}
+#popin .tips h1 {
+    font-family: 'Gotham-Bold';
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #0e5eb0;
+    text-align: center;
+    padding-top: 18px;
+}
+
+#popin .close{
+  position: relative;
+  z-index: 5;
+  top: -20px;
+  right: 15px;
+}
+
+#popin .head_form {
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    background-color: #Fff;
+    border-radius: 5px 5px 0 0;
+    -webkit-box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    -moz-box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+}
+
+#popin form {
+    width: 560px;
+    height: 550px;
+    margin: 25px;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    -moz-box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    box-shadow: -1px 3px 23px -2px rgba(0,0,0,0.2);
+    padding: 5px 30px;
+    box-sizing:border-box;
+}
+
+
+#popin form h2 {
+    width: 460px;
+    font-size: 12px;
+    font-family: 'Gotham-Bold';
+    text-transform: uppercase;
+    text-align: center;
+    color: #1B1B1B;
+    line-height: 15px;
+}
+
+#popin label {
+    font-family: 'Whitney-Book';
+    font-size: 18px;
+    color: #1b1b1b;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+}
+
+#popin label span{
+    font-family: 'Gotham-Bold';
+    font-size: 15px;
+    color: #0e59ab;
+    width: 100%;
+    text-transform: uppercase;
+}
+#popin .main {
+    width: 210px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 10px;margin-top: 5px;
+    border: 1px solid #eaeaea;
+}
+
+#popin .large {
+    width: 450px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 10px;margin-top: 5px;
+    border: 1px solid #eaeaea;
+}
+
+#popin .btn {
+    margin-top: 20px;
+    width: 139px;
+    height: 54px;
+    background: asset-url("button_form.png") no-repeat;
+    border: none;
+    font-family: 'Gotham-Book';
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 50px;
+    color: #0e5eb0;
+    transition: all 0.5s ease-out 0s;
+}
+
+#popin .btn:hover{
+    transition: all 0.5s ease-out 0s;
+    border-radius: 50px;
+    background: none;
+    background: #469fe9; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #469fe9 1%, #1c4eaa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#469fe9), color-stop(100%,#1c4eaa)); 
+    background: -webkit-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* IE10+ */
+    background: linear-gradient(45deg,  #469fe9 1%,#1c4eaa 100%); /* W3C */
+    color: #fff;
+}
+.tips_content {
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+}
+.tips_content .tips_cards {
+    display: inline-block;
+    position: relative;
+    width: 230px;
+    height: 270px;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+    border-radius: 5px;
+    margin: 15px 20px;
+    box-shadow: 3px 0px 16px rgba(0,0,0,0.2);
+}
+
+.empty {
+    display: inline-block;
+    position: relative;
+    width: 230px;
+    height: 270px;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: none !important;
+    box-shadow: none !important;
+    margin: 15px 20px;
+}
+
+
+/* Cachons la case à cocher */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+ 
+
+
+
+// /* on prépare le label */
+// [type="checkbox"]:not(:checked) + label,
+// [type="checkbox"]:checked + label {
+//   position: relative; /* permet de positionner les pseudo-éléments */
+//   cursor: pointer;    /* affiche un curseur adapté */
+// }
+
+
+
+/* Aspect des checkboxes */
+/* :before sert à créer la case à cocher */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  display: block;
+  z-index: 4;
+  position: relative;
+  left: 48px;
+  bottom: 50px;
+  width: 130px;
+  height: 130px;
+  border-radius: 140px;
+  border: 2px solid #eaeaea;
+  background: asset-url("sprites_checkboxes.png") center no-repeat;
+  background-position-y:00px;
+  cursor: pointer;    /* affiche un curseur adapté */
+}
+
+
+/* Aspect général de la coche */
+[type="checkbox"]:checked + label:before {
+  background-position-y:-130px;
+}
+
+[type="checkbox"]:not(:checked):hover + label:before, label:hover {
+  background-position-y:-260px;
+}
+
+
 
 
 /* RESPONSIVE */

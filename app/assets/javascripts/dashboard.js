@@ -1,13 +1,13 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
-// You can use CoffeeScript in this file: http://coffeescript.org/
-
 var btn;
 var btn_search;
+var btn_checkbox;
+var btn_close;
+var btn_tips;
 var h;
 var donnee;
 var id =1;
 var id_quarter =2;
+
 
 function datamind(){
 	$.getJSON("stats.json", function(data) {
@@ -16,8 +16,36 @@ function datamind(){
 		quarter_stats(null);
 		btn.on('click', quarter_stats);
 		btn_search.on('click', open_search);
+		btn_checkbox.on('click', checkbox);
+		btn_close.on('click', close_popin);
+		btn_tips.on('click', open_popin);
 	});
-}
+};
+
+
+
+function checkbox(e){
+	e.preventDefault();
+	var selected_box = $(e.currentTarget).attr('for');
+	if ($('.'+selected_box).is(":checked")){
+		$('.'+selected_box).prop('checked', false);
+	} else {
+		$('.'+selected_box).prop('checked', true);
+	}
+};
+
+
+function open_popin(e){
+	e.preventDefault();
+	console.log('test');
+	$('#popin').css('display', 'block');
+};
+
+function close_popin(e){
+	e.preventDefault();
+	$('#popin').css('display', 'none');
+};
+
 
 function open_search(e) {
 	e.preventDefault();
@@ -70,14 +98,15 @@ function offensive_ranking(e){
 		};
 			
 	};
-
-
 	return;
 };
 
 $(document).ready(function() {
 	btn = $('.target');
 	btn_search = $('.search');
+	btn_checkbox = $('.check');
+	btn_close = $('.close');
+	btn_tips = $('.cta-buy');
 	datamind();
 });
 
