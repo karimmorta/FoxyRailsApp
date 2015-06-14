@@ -20,10 +20,9 @@ function datamind(){
 }
 
 function open_search(e) {
-    e.preventDefault
+    e.preventDefault();
     $('.search_open').removeClass(' display_off');
     $('.search_open').addClass(' display_on');
-    return;
 };
 
 function quarter_stats(e) {
