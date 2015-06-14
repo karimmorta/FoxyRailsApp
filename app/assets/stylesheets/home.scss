@@ -57,7 +57,7 @@ body {
 
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   display: inline-block;
   height: 60px;
   width: 1380px;
@@ -244,6 +244,7 @@ header ul li a:hover {
 */
 
 #video{
+    position: relative;
     display: inline-block;
     text-align: center;
     width:956px;
@@ -255,14 +256,38 @@ header ul li a:hover {
 }
 
 #video .button{
+    z-index: 1;
     position: relative;
-    top: 159px;
-    left: 150px;
+    top: 210px;
+    left: 0;
     width:96px;
     height:96px;
 }
 
+#video a {
+      position: absolute;
+      top: 0;
+      left:430px;
+}
 
+.overlay_video{    
+    z-index: 1;
+    position: absolute;
+    display: block;
+    width: 720px;
+    height: 450px;
+    top: 40px;
+    left: 118px;
+    background: rgba(0,0,0,0.3);
+}
+
+#video video {
+    z-index: 1;
+    position: absolute;
+    top: 40px;
+    left: 118px;
+    display: none;
+}
 
 /* 
 !!!!!   FEATURES    !!!!! 
