@@ -226,6 +226,9 @@ h2{
     opacity: 0.3;
     transition: all 1s ease;
 }
+.active_search {
+    background: #1d50ac;
+}
 
 .active {
     border-radius: 50px;
@@ -1242,12 +1245,15 @@ p.q_away:before {
 
 
 .search_open {
+    display: none;
     z-index: 2;
     position: fixed;
     top: 124px;
     width: 1380px;
     height: 100%;
+    transition: all 1s ease-out;
 }
+
 .search_open form {
     width: 1380px;
     position: fixed;
@@ -1300,8 +1306,8 @@ input[type="search"]:-moz-placeholder { color:rgba(255,255,255,0.2); }
 }
 
 
-.display_off {display: none;}
-.display_on {display: block ;}
+.display_on {display: block ;
+}
 /* FOOTER */
 /* FOOTER */
 /* FOOTER */
