@@ -78,9 +78,7 @@
   </div>
 
   <div id="video">
-    <video width="720" height="450" id="mockup_video">
-      <source src="assets/dashboard_720x450.mp4" type="video/mp4" />
-    </video>
+  <%= video_tag (asset_url 'dashboard_720x450.mp4'), width: '720', height: '450', id: "mockup_video", type: 'video/mp4'%>
     <div class="overlay_video"></div>
     <a href=""><%= image_tag (asset_url 'button_play.png'), class: "button"%></a>
   </div>
