@@ -1,6 +1,14 @@
 class Game < ActiveRecord::Base
   has_many :picks
   require 'csv'
+
+  def self.search(search)
+    if search
+      where('game_name LIKE ?', "%#{search}%")
+    else
+      all
+    end
+  end
   def self.import_from_fd_csv
     CSV.foreach('lib/L1.csv', headers:true) do |row|
       new_hash = {}
