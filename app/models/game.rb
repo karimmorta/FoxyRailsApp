@@ -1,6 +1,9 @@
 class Game < ActiveRecord::Base
   has_many :picks
+  has_one :fbd_game_stat
+  has_one :betting_odd
   require 'csv'
+  before_save :define_game_name
 
   def self.search(search)
     if search
@@ -22,6 +25,10 @@ class Game < ActiveRecord::Base
       game.competition_id = Division.first.id
       game.save!
     end
+  end
+
+  def define_game_name
+    self.game_name = hometeam.name + " VS " +awayteam.name
   end
 
   def winner
