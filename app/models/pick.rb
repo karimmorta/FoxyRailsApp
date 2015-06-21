@@ -2,7 +2,8 @@ class Pick < ActiveRecord::Base
   require 'httparty'
   belongs_to :tipster
   belongs_to :game
-  enum type: {
+  # after_save :score
+  enum bet_type: {
     win_or_loss: 0,
     draw: 1,
     win_or_loss_handicap: 2,
@@ -63,5 +64,24 @@ class Pick < ActiveRecord::Base
 
   def odds_percent
     100 * (1 / odds) 
+  end
+
+  # def self.score
+  #   # score += 
+  # end
+
+  def self.result
+    # case type
+    #   when 1
+    #     bet_type: 
+      
+    # end
+  end
+
+  def calculations
+    # Vérifier si le montant et la côte du pronostic se rapprochent du montant et de la côte moyens du pronostiqueur
+    delta_odds = (tipster.avg_odds - odds).abs
+    delta_amount = (tipster.avg_bet - amount).abs
+    return {"delta_odds" => delta_odds, "delta_amount" => delta_amount} 
   end
 end
