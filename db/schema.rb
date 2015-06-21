@@ -11,60 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621175800) do
+ActiveRecord::Schema.define(version: 20150621190259) do
 
-  create_table "compositions", force: :cascade do |t|
-    t.integer  "team_id"
-    t.integer  "game_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "divisions", force: :cascade do |t|
-    t.string   "name"
-    t.string   "short_name"
-    t.string   "country"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "fbd_game_stats", force: :cascade do |t|
-    t.integer "game_id"
-    t.integer "attendance"
-    t.integer "referee_id"
-    t.integer "fthg"
-    t.integer "ftag"
-    t.string  "ftr"
-    t.integer "hthg"
-    t.integer "htag"
-    t.integer "htr"
-    t.integer "hs"
-    t.integer "as"
-    t.integer "hst"
-    t.integer "ast"
-    t.integer "hhw"
-    t.integer "ahw"
-    t.integer "hc"
-    t.integer "ac"
-    t.integer "hf"
-    t.integer "af"
-    t.integer "ho"
-    t.integer "ao"
-    t.integer "hy"
-    t.integer "ay"
-    t.integer "hr"
-    t.integer "ar"
-    t.integer "hbp"
-    t.integer "abp"
-  end
-
-  create_table "games", force: :cascade do |t|
-    t.integer  "home_id"
-    t.integer  "away_id"
-    t.string   "game_name"
-    t.integer  "competition_id"
-    t.datetime "start_date"
-    t.datetime "end_date"
+  create_table "betting_odds", force: :cascade do |t|
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.float    "b365h"
@@ -118,6 +67,62 @@ ActiveRecord::Schema.define(version: 20150621175800) do
     t.float    "bbav_over_two_point_five"
     t.float    "bbmx_under_two_point_five"
     t.float    "bbav_under_two_point_five"
+  end
+
+  create_table "compositions", force: :cascade do |t|
+    t.integer  "team_id"
+    t.integer  "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "divisions", force: :cascade do |t|
+    t.string   "name"
+    t.string   "short_name"
+    t.string   "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fbd_game_stats", force: :cascade do |t|
+    t.integer "game_id"
+    t.integer "attendance"
+    t.integer "referee_id"
+    t.integer "fthg"
+    t.integer "ftag"
+    t.string  "ftr"
+    t.integer "hthg"
+    t.integer "htag"
+    t.integer "htr"
+    t.integer "hs"
+    t.integer "as"
+    t.integer "hst"
+    t.integer "ast"
+    t.integer "hhw"
+    t.integer "ahw"
+    t.integer "hc"
+    t.integer "ac"
+    t.integer "hf"
+    t.integer "af"
+    t.integer "ho"
+    t.integer "ao"
+    t.integer "hy"
+    t.integer "ay"
+    t.integer "hr"
+    t.integer "ar"
+    t.integer "hbp"
+    t.integer "abp"
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.integer  "home_id"
+    t.integer  "away_id"
+    t.string   "game_name"
+    t.integer  "competition_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "picks", force: :cascade do |t|
