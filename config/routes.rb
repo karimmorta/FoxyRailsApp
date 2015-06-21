@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   post 'register_email', to: 'landing#register'
 
   get 'dashboard', to: 'dashboard#index'
-  
+  # match 'search(/:search)', :to => 'games#search', :as => :search, via: [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
