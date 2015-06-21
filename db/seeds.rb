@@ -1,3 +1,21 @@
+Team.create!([
+  {name: "ARGENTINE", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/642/300?LHSB44985-15-25"},
+  {name: "BOLIVIE", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/653/300?LHSB44985-15-25"},
+  {name: "BRESIL", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/626/300?LHSB44985-15-25"},
+  {name: "CHILI", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/629/300?LHSB44985-15-25"},
+  {name: "COLOMBIE", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/640/300?LHSB44985-15-25"},
+  {name: "EQUATEUR", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/884/300?LHSB44985-15-25"},
+  {name: "JAMAÏQUE", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/641/300?LHSB44985-15-25"},
+  {name: "MEXIQUE", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/635/300?LHSB44985-15-25"},
+  {name: "PARAGUAY", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/633/300?LHSB44985-15-25"},
+  {name: "PEROU", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/650/300?LHSB44985-15-25"},
+  {name: "URUGUAY", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/885/300?LHSB44985-15-25"},
+  {name: "VENEZUELA", division_id: nil, fanion_url: nil, logo_url: "http://medias.lequipe.fr/logo-football/883/300?LHSB44985-15-25"}
+])
+Game.create!([
+  {home_id: 5, away_id: 10, game_name: "COLOMBIE VS PEROU", competition_id: nil, start_date: "2015-06-21 19:00:00", end_date: "2015-06-21 20:45:00"},
+  {home_id: 3, away_id: 12, game_name: "BRESIL VS VENEZUELA", competition_id: nil, start_date: "2015-06-21 21:30:00", end_date: "2015-06-20 23:15:00"}
+])
 Tipster.create!([
   {name: "ACHILLE PIECHEUR", ba_url: "http://www.betadvisor.com/tipsters/football/achille-piecheur", avg_odds: 2.51, avg_yield: 9.56, score: 11.2735, avg_bet: 50.0},
   {name: "IVAN KACIC", ba_url: "http://www.betadvisor.com/tipsters/football/ivan-kacic", avg_odds: 1.96, avg_yield: 13.25, score: 7.187818181818182, avg_bet: 30.0},

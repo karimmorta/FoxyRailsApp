@@ -25,6 +25,13 @@ task :create_picks => :environment do
   puts "done."
 end
 
+desc "Create Copa america teams"
+task :create_copa_america => :environment do
+  puts "Creating teams"
+  Team.from_kimono
+  puts "done."
+end
+
 desc "Simulate some picks"
 task :tipsters_picks => :environment do
 

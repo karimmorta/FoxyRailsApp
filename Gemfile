@@ -19,7 +19,8 @@ gem 'colorize'
 # Search
 gem 'will_paginate'
 
-
+# Dump DB
+gem 'seed_dump'
 gem 'httparty'
 gem "twitter-bootstrap-rails"
 gem 'devise'
