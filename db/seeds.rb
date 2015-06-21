@@ -1,32 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-Division.create(name: "Ligue 1", short_name: "L1", country: "France")
-
-
-
-# Create Teams
-
-brasil = Team.create(name: "Brasil")
-chili = Team.create(name: "Chili")
-
-# Create Model Competition before this
-# Competition.create(name: "Copa America")
-
-game = Game.create(home_id: brasil.id, away_id: chili.id, game_name: "BRASIL VS CHILI")
-
-Tipster.first.picks.create(game_id: game.id, game_name: game.game_name, bet_type: 0, bet: "away")
-Tipster.second.picks.create(game_id: game.id, game_name: game.game_name, bet_type: 0, bet: "away")
-Tipster.third.picks.create(game_id: game.id, game_name: game.game_name, bet_type: 0, bet: "home")
-Tipster.fourth.picks.create(game_id: game.id, game_name: game.game_name, bet_type: 0, bet: "away")
-Tipster.fifth.picks.create(game_id: game.id, game_name: game.game_name, bet_type: 3, bet: "2.5")
-
-
-
-# Tipster.find_each do |tipster|
-#   tipster.picks.create(game_id: game.id,)
+Tipster.create!([
+  {name: "ACHILLE PIECHEUR", ba_url: "http://www.betadvisor.com/tipsters/football/achille-piecheur", avg_odds: 2.51, avg_yield: 9.56, score: 11.2735, avg_bet: 50.0},
+  {name: "IVAN KACIC", ba_url: "http://www.betadvisor.com/tipsters/football/ivan-kacic", avg_odds: 1.96, avg_yield: 13.25, score: 7.187818181818182, avg_bet: 30.0},
+  {name: "ROBERT VOLKAN", ba_url: "http://www.betadvisor.com/tipsters/football/robert-volkan", avg_odds: 2.36, avg_yield: 9.08, score: 10.982363636363637, avg_bet: 50.0},
+  {name: "PIERLUIGI RAIMONDI", ba_url: "http://www.betadvisor.com/tipsters/football/pierluigi-raimondi", avg_odds: 1.87, avg_yield: 3.74, score: 5.637681818181818, avg_bet: 20.0},
+  {name: "RADEK KOVAR", ba_url: "http://www.betadvisor.com/tipsters/football/radek-kovar", avg_odds: 2.43, avg_yield: 14.37, score: 5.117318181818182, avg_bet: 20.0},
+  {name: "NEIL BAXTER", ba_url: "http://www.betadvisor.com/tipsters/football/neil-baxter", avg_odds: 2.06, avg_yield: 9.21, score: 7.318272727272728, avg_bet: 30.0},
+  {name: "LORENZO MARCHETI", ba_url: "http://www.betadvisor.com/tipsters/football/lorenzo-marcheti", avg_odds: 2.01, avg_yield: 6.4, score: 9.180318181818182, avg_bet: 40.0},
+  {name: "ARLO APORTI", ba_url: "http://www.betadvisor.com/tipsters/football/arlo-aporti", avg_odds: 2.12, avg_yield: 11.06, score: 7.163818181818182, avg_bet: 30.0},
+  {name: "SILVIO BONATTI", ba_url: "http://www.betadvisor.com/tipsters/football/silvio-bonatti", avg_odds: 2.02, avg_yield: 7.03, score: 11.324272727272728, avg_bet: 50.0},
+  {name: "JEREMY PRICE", ba_url: "http://www.betadvisor.com/tipsters/football/jeremy-price", avg_odds: 2.23, avg_yield: 14.39, score: 5.292772727272728, avg_bet: 20.0},
+  {name: "EDUARDO BORRERO", ba_url: "http://www.betadvisor.com/tipsters/football/eduardo-borrero", avg_odds: 2.06, avg_yield: 17.19, score: 3.172818181818182, avg_bet: 10.0},
+  {name: "KEM FALLON", ba_url: "http://www.betadvisor.com/tipsters/football/kem-fallon", avg_odds: 1.96, avg_yield: 6.21, score: 7.333272727272727, avg_bet: 30.0},
+  {name: "EXPERT TIPSTER", ba_url: "http://www.betadvisor.com/tipsters/football/expert-tipster", avg_odds: 2.04, avg_yield: 5.42, score: 11.466727272727272, avg_bet: 50.0},
+  {name: "CHRISTOS KOSTIS", ba_url: "http://www.betadvisor.com/tipsters/football/christos-kostis", avg_odds: 1.89, avg_yield: 4.8, score: 11.925590909090909, avg_bet: 50.0},
+  {name: "PETE NORDSTED", ba_url: "http://www.betadvisor.com/tipsters/football/pete-nordsted", avg_odds: 1.93, avg_yield: 11.06, score: 3.192318181818182, avg_bet: 10.0}
+])

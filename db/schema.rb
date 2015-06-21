@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621055107) do
+ActiveRecord::Schema.define(version: 20150621175800) do
 
   create_table "compositions", force: :cascade do |t|
     t.integer  "team_id"
@@ -28,6 +28,36 @@ ActiveRecord::Schema.define(version: 20150621055107) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "fbd_game_stats", force: :cascade do |t|
+    t.integer "game_id"
+    t.integer "attendance"
+    t.integer "referee_id"
+    t.integer "fthg"
+    t.integer "ftag"
+    t.string  "ftr"
+    t.integer "hthg"
+    t.integer "htag"
+    t.integer "htr"
+    t.integer "hs"
+    t.integer "as"
+    t.integer "hst"
+    t.integer "ast"
+    t.integer "hhw"
+    t.integer "ahw"
+    t.integer "hc"
+    t.integer "ac"
+    t.integer "hf"
+    t.integer "af"
+    t.integer "ho"
+    t.integer "ao"
+    t.integer "hy"
+    t.integer "ay"
+    t.integer "hr"
+    t.integer "ar"
+    t.integer "hbp"
+    t.integer "abp"
+  end
+
   create_table "games", force: :cascade do |t|
     t.integer  "home_id"
     t.integer  "away_id"
@@ -37,32 +67,6 @@ ActiveRecord::Schema.define(version: 20150621055107) do
     t.datetime "end_date"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.integer  "attendance"
-    t.integer  "referee_id"
-    t.integer  "fthg"
-    t.integer  "ftag"
-    t.string   "ftr"
-    t.integer  "hthg"
-    t.integer  "htag"
-    t.integer  "htr"
-    t.integer  "hs"
-    t.integer  "as"
-    t.integer  "hst"
-    t.integer  "ast"
-    t.integer  "hhw"
-    t.integer  "ahw"
-    t.integer  "hc"
-    t.integer  "ac"
-    t.integer  "hf"
-    t.integer  "af"
-    t.integer  "ho"
-    t.integer  "ao"
-    t.integer  "hy"
-    t.integer  "ay"
-    t.integer  "hr"
-    t.integer  "ar"
-    t.integer  "hbp"
-    t.integer  "abp"
     t.float    "b365h"
     t.float    "b365d"
     t.float    "b365a"
@@ -133,7 +137,6 @@ ActiveRecord::Schema.define(version: 20150621055107) do
   create_table "players", force: :cascade do |t|
     t.string   "name"
     t.integer  "team_id"
-    t.integer  "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -147,11 +150,6 @@ ActiveRecord::Schema.define(version: 20150621055107) do
     t.string   "logo_url"
   end
 
-  create_table "tips", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "tipsters", force: :cascade do |t|
     t.string   "name"
     t.string   "ba_url"
@@ -161,11 +159,6 @@ ActiveRecord::Schema.define(version: 20150621055107) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float    "avg_bet"
-  end
-
-  create_table "user_scores", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
