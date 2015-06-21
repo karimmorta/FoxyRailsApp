@@ -8,10 +8,10 @@
 
   .field
     = f.label :home_id
-    = f.number_field :home_id
+    = f.select :home_id, options_for_select(@teams.collect { |t| [t.name.humanize, t.id] }, selected: @game.home_id), {} , class: "form-control"
   .field
     = f.label :away_id
-    = f.number_field :away_id
+    = f.select :away_id, options_for_select(@teams.collect { |t| [t.name.humanize, t.id] }, selected: @game.away_id), {} , class: "form-control"
   .field
     = f.label :competition_id
     = f.number_field :competition_id

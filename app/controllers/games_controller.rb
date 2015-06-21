@@ -7,7 +7,7 @@ class GamesController < ApplicationController
     if request.xhr?
       @games = Game.search(params[:search]).paginate(:per_page => 5, :page => params[:page])
     else
-      @games = Game.all.paginate(:per_page => 10, :page => params[:page])
+      @games = Game.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
     end
   end
 

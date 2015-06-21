@@ -1,12 +1,26 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// *= require reset.css
+// *= require reset
 
+
+body.gamesnew {
+  background: #e9e9eb;
+  font-size: 18px;
+}
+
+h1.gamesnew {
+  font-size: 30px;
+}
+
+body.gamesshow {
+  background: #e9e9eb;
+  font-size: 24px;
+}
 
 body {
   background: #e9e9eb;
-    font-size: 0;
+  font-size: 0;
 }
 .container{
     max-width: 2048px;
@@ -21,7 +35,13 @@ body {
 }
 
 
+// form {
+//   font-size: 18px;
+// }
 
+// h1 {
+//   font-size: 30px;
+// }
 
 /* 
 !!!!!   HEADER    !!!!! 
