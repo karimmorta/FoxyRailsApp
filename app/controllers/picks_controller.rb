@@ -14,6 +14,11 @@ class PicksController < ApplicationController
 
   # GET /picks/new
   def new
+    @tipsters = Tipster.all
+    @types = Pick.bet_types
+    @game = Game.find(params[:game_id])
+    @away = Team.find(@game.away_id)
+    @home = Team.find(@game.home_id)
     @pick = Pick.new
   end
 
@@ -24,8 +29,9 @@ class PicksController < ApplicationController
   # POST /picks
   # POST /picks.json
   def create
-    @pick = Pick.new(pick_params)
-
+    # @pick = Pick.new(pick_params)
+    @tipster = Tipster.where(name: params[:pick][:tipster]).first
+    @pick = @tipster.picks.create(pick_params)
     respond_to do |format|
       if @pick.save
         format.html { redirect_to @pick, notice: 'Pick was successfully created.' }
@@ -69,6 +75,7 @@ class PicksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pick_params
-      params[:pick]
+      mac_keys = params.fetch(:bet, {}).keys
+      params.require(:pick).permit(:bet_type, :odds, :bet, :amount, :tipster_attributes, :date, :betting_type, :game_name, :game_id)
     end
 end

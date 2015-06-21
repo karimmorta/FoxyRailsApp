@@ -6,7 +6,27 @@
         - @pick.errors.full_messages.each do |msg|
           %li= msg
 
-  = f.label :type
-  = f.select (:type, Pick.types.keys.map {|type| [type.titleize, type]})
+  = f.label :game_name
+  = f.text_field :game_name, value: @game.game_name, disabled: true, class: "form-control"
+
+  = f.label :bet_type
+  / = f.select (:type, Pick.types.keys.map {|type| [type.titleize, type]})
+  = f.select :bet_type, options_for_select(@types.collect { |t| [t[0].humanize, t[0]] }, selected: @pick.bet_type), {} , class: "form-control"
+  /   = f.radio_button :bet, :bet, @home.name)
+
+  = f.label :odds
+  = f.number_field :odds, step: 0.01, class: 'form-control'
+  = f.label :bet
+  = f.text_field :bet, class: "form-control"
+  = f.label :amount
+  = f.number_field :amount, class: 'form-control'
+  = f.label :tipster
+  = f.select :tipster, options_for_select(@tipsters.collect { |t| [t.name, t.name] }, selected: @tipsters.first), {} , class: "form-control"
+
+  / = f.label :probablité
+  / = f.text_field :probabilité 
+  = f.hidden_field :date, value:  Time.now  
+  = f.hidden_field :game_id, value: params[:game_id]
+  = f.hidden_field :game_name, value: params[:game_name]
   .actions
     = f.submit 'Save'
