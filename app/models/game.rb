@@ -7,7 +7,7 @@ class Game < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where('game_name LIKE ?', "%#{search}%")
+      where('LOWER(game_name) LIKE ?', "%#{search.downcase}%")
     else
       all
     end
