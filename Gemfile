@@ -16,6 +16,10 @@ gem 'colorize'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Search
+gem 'will_paginate'
+
+
 gem 'httparty'
 gem "twitter-bootstrap-rails"
 gem 'devise'
