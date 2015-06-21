@@ -1,0 +1,30 @@
+<!-- <%= hidden_field_tag :direction, params[:direction] %> -->
+<!-- <%= hidden_field_tag :sort, params[:sort] %> -->
+
+<% for game in @games %>
+  <%= link_to dashboard_path(game_id: game.id) do %>
+    <div class="one-column">
+      <div class="head">
+        <p class="title_block"><%= game.game_name %></p>
+        <p class="title_hours">20h45</p>
+      </div>
+      <div class="team_home">
+        <%= image_tag asset_url 'logo_team_template.png'%>
+        <h3>Brasil</h3>
+      </div>
+      <p class="label-vs">vs</p>
+      <div class="team_away">
+        <%= image_tag asset_url 'logo_team_template.png'%>
+        <h3>Argentina</h3>
+      </div>
+      <div class="av_odds">
+        <h3>Average Odds</h3>
+        <ul class="average_odds">
+          <li class="upgrade">3.23</li>
+          <li class="stable">6.56</li>
+          <li class="downgrade">1.23</li>
+        </ul>
+      </div>
+      <% end %>
+  <% end %>
+<%= will_paginate @games %>

@@ -50,10 +50,13 @@
 
   <div class="search_open display_off">
   	<div class="overlay"></div>
-  	<form>
-  		<input type="search" placeholder="Search ..."/>
-  	</form>
-  	<div class="search_results"></div>
+	  <%= form_tag games_path, :method => 'get', :id => "games_search" do %>
+		  <p>
+		    <%= search_field_tag :search, params[:search] %>
+		    <%= submit_tag "Search", :name => nil %>
+		  </p>
+	  	<div class= "search_results" id="games"><%= render 'games' %></div>
+		<% end %>
   </div>
 
   <div class="container_listgames">

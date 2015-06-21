@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+
+$(function() {
+  $("#games th, #games .pagination").on("click", "a",function() {
+    $.getScript(this.href);
+    return false;
+  });
+  $("#games_search input").keyup(function() {
+    $.get($("#games_search").attr("action"), $("#games_search").serialize(), null, "script");
+    return false;
+  });
+});
