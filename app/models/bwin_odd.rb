@@ -6,4 +6,4 @@ belongs_to :game
 #   results = results.parsed_response['results']['collection1']
 #   odds = results.map do |line|
 
-# end
+end
