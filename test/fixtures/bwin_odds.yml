@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home_odds: 1.5
+  draw_odds: 1.5
+  away_odds: 1.5
+  home_link: MyString
+  draw_link: MyString
+  away_link: MyString
+  home_team: MyString
+  away_team: MyString
+
+two:
+  home_odds: 1.5
+  draw_odds: 1.5
+  away_odds: 1.5
+  home_link: MyString
+  draw_link: MyString
+  away_link: MyString
+  home_team: MyString
+  away_team: MyString
