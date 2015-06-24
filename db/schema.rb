@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621190259) do
+ActiveRecord::Schema.define(version: 20150623103312) do
 
   create_table "betting_odds", force: :cascade do |t|
     t.datetime "created_at",                null: false
@@ -69,17 +69,30 @@ ActiveRecord::Schema.define(version: 20150621190259) do
     t.float    "bbav_under_two_point_five"
   end
 
-  create_table "compositions", force: :cascade do |t|
-    t.integer  "team_id"
-    t.integer  "game_id"
+  create_table "bwin_odds", force: :cascade do |t|
+    t.float    "home_odds"
+    t.float    "draw_odds"
+    t.float    "away_odds"
+    t.string   "home_link"
+    t.string   "draw_link"
+    t.string   "away_link"
+    t.string   "home_team"
+    t.string   "away_team"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "divisions", force: :cascade do |t|
+  create_table "competitions", force: :cascade do |t|
     t.string   "name"
     t.string   "short_name"
     t.string   "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "compositions", force: :cascade do |t|
+    t.integer  "team_id"
+    t.integer  "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
