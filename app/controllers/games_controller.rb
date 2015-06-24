@@ -7,7 +7,12 @@ class GamesController < ApplicationController
     if request.xhr?
       @games = Game.search(params[:search]).paginate(:per_page => 5, :page => params[:page])
     else
-      @games = Game.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
+      if params[:competition_id]
+        @competition = Competition.find(params[:competition_id])
+        @games = @competition.games
+      else
+        @games = Game.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
+      end
     end
   end
 

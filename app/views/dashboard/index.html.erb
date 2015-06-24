@@ -1,113 +1,21 @@
-<div id="popin">
-  <div class="tips">
-    <div class="head_form">
-      <h1>Buy tips</h1>
-      <a href="" class="close"><%= image_tag asset_url 'close_popin.png'%></a>
-    </div>
-	<div class="tips_content">
-		<span class="tips_cards">
-			<input type="checkbox" class="card_01">
-			<label for="card_01" class="check">
-				Winner of Game<br>
-				<span>1X2</span>
-			</label>
-		</span>
-		<span class="tips_cards">
-			<input type="checkbox" class="card_02">
-			<label for="card_02" class="check">
-				Goal Explosion<br>
-				<span>Over/Under</span>
-			</label>
-		</span>
-		<span class="tips_cards">
-			<input type="checkbox" class="card_03">
-			<label for="card_03" class="check">
-				Scorer<br>
-				<span>Specifics bets</span>
-			</label>
-		</span>
-		<span class="empty"></span>
-		<span class="empty"></span>
-		<span class="empty"></span>
-		<span class="empty"></span>
-	</div>
-  </div>
-</div>
-<div class="container">
-  <header>
-	<div class="logo">
-	  <%= image_tag asset_url 'logo.png'%>
-	</div>
-	<div class="baseline">
-	  <h2>enhance your sports betting analysis</h2>
-	</div>
-	<div class="nav">
-	  <div class="menu">
-		<ul>
-		  <li><a href="">Features</a></li>
-		  <li><a href="">Pricing</a></li>
-		  <li><a href="">More</a></li>
-		</ul>
-	  </div>
-	  <div class="register"  style="display:none">
-		<ul>
-		  <li><a href="">Sign in</a></li>
-		  <li><a href="" onClick="return pop('popin')" class="registration">Sign up</a></li>
-		</ul>
-	  </div>
-	  <div class="connected">
-		<a href="">
-			<%= image_tag asset_url 'profile.png'%>
-		  <p>Phillipe</p>
-		</a>
-		<a href="" class="btn notif"><%= image_tag asset_url 'notif_icon.png'%></a>
-		<a href="" class="btn close-sessionv"><%= image_tag asset_url 'close_session_icon.png'%></a>
-	  </div>
-	</div>
-
-	<div class="clear"></div>
-	<div class="subnav">
-	  <div class="nav_soccer">
-		<a href="" class="title">SOCCER :</a>
-		<ul>
-		  <li><a href="" class="active">Copa America</a></li>
-		  <li><a href="">Ligue 1</a></li>
-		  <li><a href="">Liga</a></li>
-		  <li><a href="">Serie A</a></li>
-		  <li><a href="">Premier League</a></li>
-		  <li><a href="">UEFA Champions League</a></li>
-		</ul>
-	  </div>
-	  <div class="icon_search"><a href="" class="search"></a></div>
-	</div>
-	<div class="gradient_subnav"></div>
-  </header>
-
-  <div class="search_open display_off">
-  	<div class="overlay"></div>
-  	<form>
-  		<input type="search" placeholder="Search ..."/>
-  	</form>
-  	<div class="search_results"></div>
-  </div>
-
-  <div class="container_dashboard">
+<%= @tipsters.to_json %>
+<div class="container_dashboard">
 	<div class="main">
 	  <div class="two-column">
 		<div class="head">
 		  <div class="title home">
-		  <%= image_tag asset_url 'fanion_juve.png'%>
-			<h3>Juventus F.C</h3>
+		  <%= image_tag @game.hometeam.logo_url, width: "80", height: "80"%>
+			<h3><%= @game.hometeam.name %></h3>
 		  </div>
 		  <div class="title away">
-			<h3>F.C Barcelona</h3>
-			<%= image_tag asset_url 'fanion_barca.png'%>
+			<h3><%= @game.awayteam.name %></h3>
+			<%= image_tag @game.awayteam.logo_url, width: "80", height: "80"%>
 		  </div>
 		</div>
 		<%= image_tag (asset_url 'maglia_juve.png'), class: "shirt_home"%>
 		<%= image_tag (asset_url 'maglia_barca.png'), class: "shirt_away"%>
 		<div class="info_game">
-		  <p class="date"><span class="bg"><span class="text_date">SAMEDI 6 JUIN 2015 - 20h45</span></span></p>
+		  <p class="date"><span class="bg"><span class="text_date"><%= @game.start_date.strftime("%A %d %B - %kh%M") %></span></span></p>
 		  <p class="others_infos">
 			Stadium : Olympiastadion<br>Audiences : 47 000 places<br>Diffusion : Canal + & BeinSport
 		  </p>

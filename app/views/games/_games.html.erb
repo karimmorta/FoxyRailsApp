@@ -3,7 +3,7 @@
     <div class="one-column">
       <div class="head">
         <p class="title_block"><%= game.game_name %></p>
-        <p class="title_hours">20h45</p>
+        <p class="title_hours" style="text-transform:lowercase !important;"><%= game.start_date.strftime("%d/%m à %kh%M") %></p>
       </div>
       <div class="team_home">
         <%= image_tag game.hometeam.logo_url, width: 170, height: 170 %>
@@ -15,7 +15,7 @@
         <h3><%= game.awayteam.name %></h3>
       </div>
       <div class="av_odds">
-        <h3>Average Odds</h3>
+        <h3>Côtes moyennes</h3>
         <ul class="average_odds">
           <li class="upgrade">3.23</li>
           <li class="stable">6.56</li>
