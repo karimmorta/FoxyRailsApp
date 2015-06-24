@@ -1,0 +1,96 @@
+<div id="popin">
+  <div class="tips">
+    <div class="head_form">
+      <h1>Buy tips</h1>
+      <a href="" class="close"><%= image_tag asset_url 'close_popin.png'%></a>
+    </div>
+  <div class="tips_content">
+    <span class="tips_cards">
+      <input type="checkbox" class="card_01">
+      <label for="card_01" class="check">
+        Winner of Game<br>
+        <span>1X2</span>
+      </label>
+    </span>
+    <span class="tips_cards">
+      <input type="checkbox" class="card_02">
+      <label for="card_02" class="check">
+        Goal Explosion<br>
+        <span>Over/Under</span>
+      </label>
+    </span>
+    <span class="tips_cards">
+      <input type="checkbox" class="card_03">
+      <label for="card_03" class="check">
+        Scorer<br>
+        <span>Specifics bets</span>
+      </label>
+    </span>
+    <span class="empty"></span>
+    <span class="empty"></span>
+    <span class="empty"></span>
+    <span class="empty"></span>
+  </div>
+  </div>
+</div>
+<div class="container">
+  <header>
+  <div class="logo">
+    <%= image_tag asset_url 'logo.png'%>
+  </div>
+  <div class="baseline">
+    <h2>enhance your sports betting analysis</h2>
+  </div>
+  <div class="nav">
+    <div class="menu">
+    <ul>
+      <li><a href="">Features</a></li>
+      <li><a href="">Pricing</a></li>
+      <li><a href="">More</a></li>
+    </ul>
+    </div>
+    <div class="register"  style="display:none">
+    <ul>
+      <li><a href="">Sign in</a></li>
+      <li><a href="" onClick="return pop('popin')" class="registration">Sign up</a></li>
+    </ul>
+    </div>
+    <div class="connected">
+    <a href="">
+      <%= image_tag asset_url 'profile.png'%>
+      <p>Phillipe</p>
+    </a>
+    <a href="" class="btn notif"><%= image_tag asset_url 'notif_icon.png'%></a>
+    <a href="" class="btn close-sessionv"><%= image_tag asset_url 'close_session_icon.png'%></a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  <div class="subnav">
+    <div class="nav_soccer">
+    <a href="" class="title">FOOTBALL :</a>
+    <ul>
+      <li><%= link_to 'Copa America', games_path(competition_id: 1), class: "active" %></li>
+      <li><%= link_to 'Coupe du Monde (F)', games_path(competition_id: 3) %></li>
+      <li><%= link_to 'Ligue 1', games_path(competition_id: 2) %></a></li>
+      <li><a href="">Liga</a></li>
+      <li><a href="">Serie A</a></li>
+      <li><a href="">Premier League</a></li>
+      <li><a href="">UEFA Champions League</a></li>
+    </ul>
+    </div>
+    <div class="icon_search"><a href="" class="search"></a></div>
+  </div>
+  <div class="gradient_subnav"></div>
+  </header>
+  <div class="search_open display_off">
+    <% if controller_name != 'games' %> 
+      <div class="overlay"></div> 
+    <% end %>
+    <%= form_tag games_path, :method => 'get', :id => "games_search" do %>
+      <%= search_field_tag :search, params[:search] %>
+    <% end %>
+    <% if controller_name == "dashboard" %> 
+      <div class="search_results" id="games"><%= render 'games/games' %></div>
+    <% end %>
+  </div>
