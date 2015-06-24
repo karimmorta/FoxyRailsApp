@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150623103312) do
+ActiveRecord::Schema.define(version: 20150624140917) do
 
   create_table "betting_odds", force: :cascade do |t|
     t.datetime "created_at",                null: false
@@ -161,9 +161,9 @@ ActiveRecord::Schema.define(version: 20150623103312) do
 
   create_table "teams", force: :cascade do |t|
     t.string   "name"
-    t.integer  "division_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "competition_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "fanion_url"
     t.string   "logo_url"
   end

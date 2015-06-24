@@ -33,3 +33,10 @@ Tipster.create!([
   {name: "CHRISTOS KOSTIS", ba_url: "http://www.betadvisor.com/tipsters/football/christos-kostis", avg_odds: 1.89, avg_yield: 4.8, score: 11.925590909090909, avg_bet: 50.0},
   {name: "PETE NORDSTED", ba_url: "http://www.betadvisor.com/tipsters/football/pete-nordsted", avg_odds: 1.93, avg_yield: 11.06, score: 3.192318181818182, avg_bet: 10.0}
 ])
+
+Competition.create!([
+  {name: "Coupe d'Amérique", short_name: "C.A", country: "Chili"},
+  {name: "Ligue 1", short_name: "L1", country: "France"},
+  {name: "Coupe du Monde (F)", short_name: "W.C(F)", country: "Canada"},
+  {name: "Liga", short_name: "Liga", country: "Espagne"},
+])
