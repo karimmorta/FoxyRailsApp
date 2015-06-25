@@ -107,12 +107,20 @@ $(document).ready(function() {
 	btn_close = $('.close');
 	btn_tips = $('.cta-buy');
 	datamind();
+	$('#popin').hide();
+	$('.w-pattern').next().hide();
+	// $('.w-pattern').next().next().hide();
+	// $('.w-pattern').next().next().next().hide();
 	$('.unlock-btn').click(function(){
 	$('#popin').fadeOut("slow");
-	$('.w-pattern').next().fadeOut("slow");
-	$('.w-pattern').next().next().fadeOut("slow");
-	$('.w-pattern').next().next().next().fadeOut("slow");
+	$('.w-pattern').next().show();
+	$('.outcome').next().fadeOut("slow");
+	$('.outcome').next().next().fadeOut("slow");
+	$('.outcome').next().next().next().fadeOut("slow");
 	$('.outcome').fadeIn(3000);
 	});
+	// $('.outcome').click(function() {
+
+	// });
 });
 

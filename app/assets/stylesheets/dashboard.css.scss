@@ -12,6 +12,24 @@ body {
 	font-size: 0;
 }
 
+.outcome {
+  display: none;
+  width: 260px;
+  height: 265px;
+  margin: 30px auto;
+  background-color: white;
+  border-radius: 10px;
+  // box-shadow: 0px 0px 1px 1px;
+  p {
+    font-family: "Gotham-Book";
+    color: #0e6bbc !important;
+    font-size: 15px;
+    text-align: center;
+  }
+  img {
+    margin-top: 45px !important;
+  }
+}
 .table td,
 .table th {
   background-color: #fff !important;
@@ -274,10 +292,6 @@ table th[class*="col-"] {
 
 .unlock {
 	background-color: #35D55C !important;
-}
-
-.outcome {
-	display:none;
 }
 
 .winner_title {
@@ -1967,4 +1981,12 @@ footer .right ul {
 	header, footer {
 		width: 100%;
 	}
+
+  .one-column.buy-tips {
+    width: 880px;
+  }
+  .w-pattern {
+    max-width: 880px;
+    background-size:30%;
+  }
 }
