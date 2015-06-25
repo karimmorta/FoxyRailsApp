@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150624140917) do
+ActiveRecord::Schema.define(version: 20150624224951) do
 
   create_table "betting_odds", force: :cascade do |t|
     t.datetime "created_at",                null: false
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20150624140917) do
     t.string   "away_team"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "game_id"
   end
 
   create_table "competitions", force: :cascade do |t|

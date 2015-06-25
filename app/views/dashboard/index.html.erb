@@ -14,26 +14,43 @@
 		</div>
 		<%= image_tag (asset_url 'maglia_juve.png'), class: "shirt_home"%>
 		<%= image_tag (asset_url 'maglia_barca.png'), class: "shirt_away"%>
-		<div class="info_game">
+		<!-- <div class="info_game">
 		  <p class="date"><span class="bg"><span class="text_date"><%= @game.start_date.strftime("%A %d %B - %kh%M") %></span></span></p>
 		  <p class="others_infos">
 			Stadium : Olympiastadion<br>Audiences : 47 000 places<br>Diffusion : Canal + & BeinSport
 		  </p>
-		</div>
+		</div> -->
 		<div class="odds">
 		  <h3>Average Odds</h3>
 		  <ul class="average_odds">
-			<li class="upgrade">3.23</li>
-			<li class="stable">6.56</li>
-			<li class="downgrade">1.23</li>
+      <%= link_to 'https://sports.bwin.fr' + @game.bwin_odd.home_link, method: "POST", target: '_blank' do %>
+      	<li class="upgrade"><%=@game.bwin_odd.home_odds%></li>
+      <% end %>
+      <%= link_to 'https://sports.bwin.fr' + @game.bwin_odd.draw_link, method: "POST", target: '_blank' do %>
+      	<li class="stable"><%=@game.bwin_odd.draw_odds%></li>
+      <% end %>
+      <%= link_to 'https://sports.bwin.fr' + @game.bwin_odd.away_link, method: "POST", target: '_blank' do %>
+      	<li class="downgrade"><%=@game.bwin_odd.away_odds%></li>
+      <% end %>
 		  </ul>
 		</div>
 	  </div>
 	  <div class="one-column buy-tips">
 		<div class="w-pattern"></div>
+		<div class="outcome"><h2 class="winner_title">Vainqueur</h2><br><ul class="explicit_stats"><li><a class="fav q_away" style="opacity: 1.0;"><%=@winning_team.name%><br><br><span class="big_stats"><%= (@outcome * 100).round(1) %> % </span><%= image_tag @winning_team.logo_url, width: "80", height: "80"%></div>
 		<%= image_tag asset_url 'buy_lock.png'%>
 		<p><span class="gras">unlock</span><br>our recommendation</p>
 		<a href="" class="cta-buy">Buy our Tips</a>
+		<!-- <form action="" method="POST">
+		  <script
+		    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+		    data-key="pk_test_VqEB8wnWqEjKXwnybjOYnpGp"
+		    data-amount="2000"
+		    data-name="Demo Site"
+		    data-description="1 pronostic (5.00€)"
+		    data-image="/128x128.png">
+		  </script>
+		</form> -->
 	  </div>
 	</div>
 	<div class="data-content">
@@ -45,11 +62,11 @@
 		</div>
 		<div class="o_content">
 		  <div class="o_home">
-			<h3>Juventus F.C</h3>
+			<h3><%=@game.hometeam.name%></h3>
 			<p>89.5</p>
 		  </div>
 		  <div class="o_away">
-			<h3>F.C Barcelona</h3>
+			<h3><%=@game.awayteam.name%></h3>
 			<p>100</p>
 		  </div>
 		  <div class="barchart">
@@ -121,27 +138,27 @@
 		<div class="q_content">
 		  <div class="q_infos">
 			<p class="q_title">
-				JUVENTUS FC vs FC BARCELONA <br>
+				<%= @game.game_name %> <br>
 				<span class="sub">Possession</span>
 			</p>
 			<ul class="explicit_stats">
 				<li>
 					<a class=" q_home" href="">
-						Juventus F.C <br>
+						<%=@game.hometeam.name%> <br>
 						<span class="big_stats">64%</span> 
 					</a>
 				</li>
 				<li>
 					<a class="fav q_away" href="">
-						F.C Barcelona <br>
+						<%=@game.awayteam.name%> <br>
 						<span class="big_stats">86%</span> 
 					</a>
 				</li>
 			</ul>
 			<div class="q_explicit_legend">
 				<p class="title">Legend</p>
-				<p class="q_home">Juventus F.C</p>
-				<p class="q_away">F.C Barcelona</p>
+				<p class="q_home"><%=@game.hometeam.name%></p>
+				<p class="q_away"><%=@game.awayteam.name%></p>
 			</div>
 
 			}
@@ -288,6 +305,24 @@
 		  <p class="title_block">Odds Comparator</p>
 		  <div class="settings"><a href=""><%= image_tag asset_url 'settings_icon.png'%></a></div>
 		</div>
+		<table class="table" style="font-size:14px;">
+			<thead>	
+				<tr>
+					<th> Tipster </th>
+					<th> Score </th>
+					<th> Amount </th>
+				</tr>
+			</thead>
+			<tbody>
+			<% for pick in @picks %>
+				<tr>
+					<td><%=pick.tipster.name%></td>
+					<td><%=pick.tipster.score.round(2)%></td>
+					<td><%=pick.amount.round(0)%>€</td>
+				</tr>
+			<% end %>
+				</tbody>
+			</table>
 	  </div>  
 	</div>
   </div>

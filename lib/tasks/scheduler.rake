@@ -32,6 +32,14 @@ task :create_copa_america => :environment do
   puts "done."
 end
 
+
+desc "Create Bwin Odds"
+task :bwin_odds => :environment do
+  puts "Creating teams"
+  BwinOdd.from_kimono
+  puts "done."
+end
+
 desc "Simulate some picks"
 task :tipsters_picks => :environment do
 

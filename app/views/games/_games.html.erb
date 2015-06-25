@@ -17,9 +17,21 @@
       <div class="av_odds">
         <h3>Côtes moyennes</h3>
         <ul class="average_odds">
-          <li class="upgrade">3.23</li>
-          <li class="stable">6.56</li>
-          <li class="downgrade">1.23</li>
+          <% if game.bwin_odd %>
+            <%= link_to 'https://sports.bwin.fr' + game.bwin_odd.home_link, method: "POST", target: '_blank' do %>
+              <li class="upgrade"><%=game.bwin_odd.home_odds%></li>
+            <% end %>
+            <%= link_to 'https://sports.bwin.fr' + game.bwin_odd.draw_link, method: "POST", target: '_blank' do %>
+              <li class="stable"><%=game.bwin_odd.draw_odds%></li>
+            <% end %>
+            <%= link_to 'https://sports.bwin.fr' + game.bwin_odd.away_link, method: "POST", target: '_blank' do %>
+              <li class="downgrade"><%=game.bwin_odd.away_odds%></li>
+            <% end %>
+          <% else %>
+          <li class="upgrade">0</li>
+          <li class="upgrade">0</li>
+          <li class="upgrade">0</li>
+          <% end %>
         </ul>
       </div>
     </div>

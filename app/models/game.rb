@@ -2,12 +2,13 @@ class Game < ActiveRecord::Base
   has_many :picks
   has_one :fbd_game_stat
   has_one :betting_odd
+  has_one :bwin_odd
   require 'csv'
   before_save :define_game_name
 
   def self.search(search)
     if search
-      where('LOWER(game_name) LIKE ?', "%#{search.downcase}%")
+      where('lower(game_name) LIKE ?', "%#{search.downcase}%")
     else
       all
     end
