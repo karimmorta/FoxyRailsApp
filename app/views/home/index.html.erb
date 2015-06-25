@@ -1,46 +1,22 @@
 <div id="popin">
   <div class="signin">
     <div class="head_form">
-      <h1> Closed Beta Registration</h1>
+      <h1> Accès privé à la Beta</h1>
       <a href="" onClick="return hive('popin')" class="close"><img src="assets/close_popin.png" alt=""></a>
     </div>
-    <form role="form" action="/auth/local" method="post">
-      <h2>sign in<br>for access to the private beta</h2>
-      <label for="mon_id">
-        Name <br>
-        <input type="text" class="main" name="identifier" placeholder="">
-      </label>
-      <label for="mon_id">
-        First Name<br>
-        <input type="text" class="main" name="identifier" placeholder="">
-      </label>
-      <label for="mon_id">
-        Password<br>
-        <input type="password" class="main" name="password" placeholder="">
-      </label>
-      <label for="mon_id">
-        Check Password<br>
-        <input type="password" class="main" name="password" placeholder="">
-      </label>
-      <label for="mon_id">
-        E-mail<br>
-        <input type="text" class="large" name="identifier" placeholder="">
-      </label>
-      <label for="mon_id">
-        Country<br>
-        <input type="text" class="main" name="identifier" placeholder="">
-      </label>
-      <label for="mon_id">
-        Zip Code<br>
-        <input type="text" class="main" name="identifier" placeholder="">
-      </label>
-      <label for="mon_id">
-        Adress<br>
-        <input type="text" class="large" name="identifier" placeholder="">
-      </label>
+    <%= form_for(User.new, :as => :user, :url => registration_path(:user)) do |f| %>
+      <h2>Inscrivez vous pour<br>un accès anticipé</h2>
+      <%= f.label(:email) %>
+      <%= f.email_field(:email, class: "large") %>
       <br>
-      <button type="submit" class="btn">INSCRIPTION</button>
-      </form>
+      <%= f.label 'Mot de passe' %>
+      <br>
+      <%= f.password_field(:password, class: "large") %>
+      <br>
+      <%= f.label "Confirmation de mot de passe" %>
+      <%= f.password_field(:password_confirmation, class: "large") %>
+      <%= f.submit "Inscription", class: 'btn' %>
+    <% end %>
   </div>
 </div>
 <div class="container">

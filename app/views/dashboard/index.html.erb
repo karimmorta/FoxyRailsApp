@@ -11,8 +11,8 @@
 			<%= image_tag @game.awayteam.logo_url, width: "80", height: "80"%>
 		  </div>
 		</div>
-		<%= image_tag (asset_url 'maglia_juve.png'), class: "shirt_home"%>
-		<%= image_tag (asset_url 'maglia_barca.png'), class: "shirt_away"%>
+		<%= image_tag (asset_url 'maglia_deutsch 2.png'), class: "shirt_home"%>
+		<%= image_tag (asset_url 'maglia_france.png'), class: "shirt_away"%>
 		<!-- <div class="info_game">
 		  <p class="date"><span class="bg"><span class="text_date"><%= @game.start_date.strftime("%A %d %B - %kh%M") %></span></span></p>
 		  <p class="others_infos">
@@ -21,17 +21,23 @@
 		</div> -->
 		<div class="odds">
 		  <h3>Average Odds</h3>
-		  <ul class="average_odds">
-      <%= link_to 'https://sports.bwin.fr' + @game.bwin_odd.home_link, method: "POST", target: '_blank' do %>
-      	<li class="upgrade"><%=@game.bwin_odd.home_odds%></li>
+		  <% if @game.bwin_odd %>
+			  <ul class="average_odds">
+	      <%= link_to 'https://sports.bwin.fr' + @game.bwin_odd.home_link, method: "POST", target: '_blank' do %>
+	      	<li class="upgrade"><%=@game.bwin_odd.home_odds%></li>
+	      <% end %>
+	      <%= link_to 'https://sports.bwin.fr' + @game.bwin_odd.draw_link, method: "POST", target: '_blank' do %>
+	      	<li class="stable"><%=@game.bwin_odd.draw_odds%></li>
+	      <% end %>
+	      <%= link_to 'https://sports.bwin.fr' + @game.bwin_odd.away_link, method: "POST", target: '_blank' do %>
+	      	<li class="downgrade"><%=@game.bwin_odd.away_odds%></li>
+	      <% end %>
+			  </ul>
+			<% else %>
+	      <li class="upgrade">0</li>
+	      <li class="upgrade">0</li>
+	      <li class="upgrade">0</li>
       <% end %>
-      <%= link_to 'https://sports.bwin.fr' + @game.bwin_odd.draw_link, method: "POST", target: '_blank' do %>
-      	<li class="stable"><%=@game.bwin_odd.draw_odds%></li>
-      <% end %>
-      <%= link_to 'https://sports.bwin.fr' + @game.bwin_odd.away_link, method: "POST", target: '_blank' do %>
-      	<li class="downgrade"><%=@game.bwin_odd.away_odds%></li>
-      <% end %>
-		  </ul>
 		</div>
 	  </div>
 	  <div class="one-column buy-tips">
@@ -71,7 +77,7 @@
 		  </div>
 		  <div class="o_away">
 			<h3><%=@game.awayteam.name%></h3>
-			<p>100</p>
+			<p>72.8</p>
 		  </div>
 		  <div class="barchart">
 			<ul class="o_val">
@@ -111,13 +117,15 @@
 					<g id="player_title_mid">
 						<path fill-rule="evenodd" clip-rule="evenodd" fill="#7E1338" d="M288,0h142v120H258L288,0z"/></g>
 				</svg>
-				<span class="player_number">10</span>
-				<span class="player_firstname">Lionel</span>
-				<span class="player_name">Messi</span>
+				<span class="player_number">3</span>
+				<span class="player_firstname">Laure</span>
+				<span class="player_name">Boulleau</span>
 				<%= image_tag asset_url 'arrow_player.png'%>
 			</a>
 		</div>
-		<%= image_tag (asset_url 'player_messi.png'), class: "player_visu" %>
+		<% if @game.game_name == "ALLEMAGNE VS FRANCE" %>
+			<%= image_tag (asset_url 'boulleau.png'), class: "player_visu" %>
+		<%end %>
 	  </div>
 
 	  <div class="two-column">
