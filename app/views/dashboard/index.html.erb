@@ -37,7 +37,9 @@
 	  </div>
 	  <div class="one-column buy-tips">
 		<div class="w-pattern"></div>
-		<div class="outcome"><h2 class="winner_title">Vainqueur</h2><br><ul class="explicit_stats"><li><a class="fav q_away" style="opacity: 1.0;"><%=@winning_team.name%><br><br><span class="big_stats"><%= (@outcome * 100).round(1) %> % </span><%= image_tag @winning_team.logo_url, width: "80", height: "80"%></div>
+		<% if @outcome %>
+			<div class="outcome"><h2 class="winner_title">Vainqueur</h2><br><ul class="explicit_stats"><li><a class="fav q_away" style="opacity: 1.0;"><%=@winning_team.name%><br><br><span class="big_stats"><%= (@outcome * 100).round(1) %> % </span><%= image_tag @winning_team.logo_url, width: "80", height: "80"%></div>
+		<% end %>
 		<%= image_tag asset_url 'buy_lock.png'%>
 		<p><span class="gras">unlock</span><br>our recommendation</p>
 		<a href="" class="cta-buy">Buy our Tips</a>
