@@ -5,6 +5,9 @@ class DashboardController < ApplicationController
     else
       @game = Game.last
     end
+    @picks = @game.picks.where(game: @game)
     @tipsters = @game.picks.map(&:tipster)
+    @winning_team = @game.outcome.first
+    @outcome = @game.outcome.second
   end
 end

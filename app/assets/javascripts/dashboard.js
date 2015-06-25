@@ -8,9 +8,8 @@ var donnee;
 var id =1;
 var id_quarter =2;
 
-
 function datamind(){
-	$.getJSON("stats.json", function(data) {
+	$.getJSON("../stats.json", function(data) {
 		donnee = data;
 		offensive_ranking(null);
 		quarter_stats(null);
@@ -108,5 +107,12 @@ $(document).ready(function() {
 	btn_close = $('.close');
 	btn_tips = $('.cta-buy');
 	datamind();
+	$('.unlock-btn').click(function(){
+	$('#popin').fadeOut("slow");
+	$('.w-pattern').next().fadeOut("slow");
+	$('.w-pattern').next().next().fadeOut("slow");
+	$('.w-pattern').next().next().next().fadeOut("slow");
+	$('.outcome').fadeIn(3000);
+	});
 });
 
