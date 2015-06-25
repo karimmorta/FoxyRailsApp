@@ -2,7 +2,9 @@ class Pick < ActiveRecord::Base
   require 'httparty'
   belongs_to :tipster
   belongs_to :game
-  # after_save :score
+
+  after_save :update_tipster_avg_bet, :update_tipster_avg_odds
+
   enum bet_type: {
     win_or_loss: 0,
     draw: 1,
@@ -76,6 +78,14 @@ class Pick < ActiveRecord::Base
     #     bet_type: 
       
     # end
+  end
+
+  def update_tipster_avg_odds
+    tipster.calculate_avg_odds
+  end
+
+  def update_tipster_avg_bet
+    tipster.calculate_avg_bet
   end
 
   def calculations

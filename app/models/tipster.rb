@@ -40,6 +40,11 @@ class Tipster < ActiveRecord::Base
     save!
   end
 
+  def calculate_avg_odds
+    self.avg_bet = ( avg_bet + picks.last.odds ) / picks.count
+    save!
+  end
+
   def set_score
     self.score = (self.win_rate * 0.5) + self.win_rate_ten + (picks.count / 10) - (avg_odds * 0.15) + (avg_bet * 0.2)
     self.save! 
