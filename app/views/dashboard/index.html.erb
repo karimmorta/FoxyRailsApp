@@ -44,7 +44,7 @@
 		<div class="w-pattern"></div>
 		<p> Notre recommandation </p>
 		<% if @outcome %>
-		<div class="outcome"><br><%= image_tag @winning_team.logo_url, width: "80", height: "80"%><br><p>Victoire</p><br><p style="margin-top:0px !important;"><%= (@outcome * 100).round(1) %> % </p></div>
+		<div class="outcome"><br><br><br><p><%= @winning_team.name %></p><%= image_tag @winning_team.logo_url, width: "80", height: "80"%><br><p>Vainqueur du Match</p><br><p style="margin-top:0px !important;font-size: 40px;font-family: 'Gotham-Bold';"><%= (@outcome * 100).round(1) %> % </p></div>
 		<% end %>
 <!-- 			<div class="outcome"><h2 class="winner_title">Vainqueur</h2><br><ul class="explicit_stats"><li><a class="fav q_away" style="opacity: 1.0;"><%=@winning_team.name%><br><br><span class="big_stats"><%= (@outcome * 100).round(1) %> % </span><%= image_tag @winning_team.logo_url, width: "80", height: "80"%></div> -->
 

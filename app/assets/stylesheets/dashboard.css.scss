@@ -27,7 +27,7 @@ body {
     text-align: center;
   }
   img {
-    margin-top: 45px !important;
+    margin-top: 0px !important;
   }
 }
 .table td,
@@ -1128,11 +1128,12 @@ ONE COLUMN
 
 .buy-tips p {
 	margin-top: 15px;
-	font-size: 15px;
+	font-size: 12px;
 	line-height: 25px;
 	color: #fff;
 	text-transform: uppercase;
 	font-family: 'Gotham-Book';
+    margin-bottom: 5px;
 }
 
 .buy-tips p .gras {

@@ -2,10 +2,10 @@
   <div class="signin">
     <div class="head_form">
       <h1> Accès privé à la Beta</h1>
-      <a href="" onClick="return hive('popin')" class="close"><img src="assets/close_popin.png" alt=""></a>
+      <a href="" onClick="return hive('popin')" class="close"><%= image_tag asset_url 'close_popin.png'%></a>
     </div>
     <%= form_for(User.new, :as => :user, :url => registration_path(:user)) do |f| %>
-      <h2>Inscrivez vous pour<br>un accès anticipé</h2>
+      <h2>Inscription</h2>
       <%= f.label(:email) %>
       <%= f.email_field(:email, class: "large") %>
       <br>
@@ -48,7 +48,7 @@
     <%= image_tag asset_url 'ico_sep.png'%>
     <p>Accéder aux meilleurs pronostics aux monde. Utilisez nous outils pour faire des analyses précises des rencontres. Gagnez de l'argent.</p>
     <div class="cta">
-      <a href="" class="tryit">Essayez maintenant</a>
+      <%=link_to 'Essayez maitenant', games_path, class: "tryit"%>
       <a href="">Prix</a>
     </div>
   </div>
