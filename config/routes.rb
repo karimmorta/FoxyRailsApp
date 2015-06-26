@@ -12,7 +12,6 @@ Rails.application.routes.draw do
 
   resources :games
 
-  devise_for :users
   devise_for :users, :controllers => { :registrations => "registrations" }
   get 'landing', to: 'landing#index'
   post 'register_email', to: 'landing#register'
