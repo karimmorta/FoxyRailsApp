@@ -5,13 +5,13 @@ class GamesController < ApplicationController
   # GET /games.json
   def index
     if request.xhr?
-      @games = Game.where('end_date > ?', Time.now + 2.day).search(params[:search]).paginate(:per_page => 5, :page => params[:page])
+      @games = Game.search(params[:search]).paginate(:per_page => 5, :page => params[:page])
     else
       if params[:competition_id]
         @competition = Competition.find(params[:competition_id])
-        @games = @competition.games.where('end_date > ?', Time.now + 0.5.day)
+        @games = @competition.games
       else
-        @games = Game.where('end_date > ?', Time.now + 2.day).search(params[:search]).paginate(:per_page => 10, :page => params[:page])
+        @games = Game.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
       end
     end
   end
